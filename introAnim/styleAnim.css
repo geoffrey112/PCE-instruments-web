@@ -1,0 +1,39 @@
+#backgroundEnter{
+  background-color: #000000c7;
+  position: fixed;
+  height:100%;
+  width:100%;
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+#logo{
+  width:400px;
+  height: 200px;
+  background:no-repeat 0/400px url('/introAnim/logo-pce.png');
+  margin:35vh auto;
+  opacity: 1;
+  visibility: visible;
+  animation-duration: 1s;
+  animation-timing-function:cubic-bezier(0.25, 0.1, 0.25, 2.0);
+  animation-fill-mode: forwards;
+  animation-name: animLogo;
+}
+
+@keyframes animLogo{
+  from{
+    width: 0;
+    opacity: 0;
+  }
+
+  10%{
+    width:200px;
+    opacity: 0;
+  }
+  
+  to{
+    opacity: 1;
+    width:400px;
+  }
+}

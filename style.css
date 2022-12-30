@@ -1,0 +1,1093 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.noscript{
+  width:fit-content;
+  height:fit-content;
+  padding: 60px 30px;
+  border-radius: 20px;
+  background-color: #115ba0;
+  box-shadow: 5px 5px 5px 5px #0000007e;
+  color:white;
+  font-weight:bold;
+  text-align: center;
+  position: absolute;
+  top:250px;
+  left:calc(50% - 290px);
+}
+
+h2{
+  font-weight:initial;
+  font-size:44px;
+}
+
+a{
+  text-decoration: none;
+}
+
+/**** Re-use class ****/
+.flex{
+  display: flex;
+}
+
+.lineHeight{
+  line-height: 24px;
+}
+
+.txtJustif{
+  text-align: justify;
+}
+
+.blueBold{
+  color:#448ab3;
+  font-weight:bold;
+}
+
+.decoSquare{
+  background: url('image/square_dot.jpg') center/cover;
+  width:380px;
+  height:370px;
+  position:absolute;
+}
+
+.justEnd{
+  justify-content: end;
+}
+
+.justCenter{
+  justify-content: center;
+  width:100%;
+}
+
+.rel{
+  position: relative;
+}
+
+.z0{
+  z-index: 0;
+}
+
+.z1{
+  z-index: 1;
+}
+
+.z2{
+  z-index: 2;
+}
+
+.imageMess{
+  background: url('image/messtechnik.jpg') center/cover;
+}
+
+.imageRegel{
+  background: url('image/regeltechnik.jpg') center/cover;
+}
+
+.imageLabor{
+  background: url('image/labortechnik.jpg') center/cover;
+}
+
+.imageWage{
+  background: url('image/wagetechnik.jpg') center/cover;
+}
+
+/**** Header ****/
+header{
+  height:690px;
+  background:linear-gradient(to bottom, #00000080, #ff000000), url("image/back\ header.jpg") center/cover no-repeat;
+}
+
+.headTop{
+  height:100px;
+  display: flex;
+}
+
+.headTop a{
+  color:#ffffff;
+  text-decoration: none;
+}
+
+.headLeft > img{
+  width:300px;
+  margin-left:20px;
+  margin-top:-5px;
+  align-self:flex-start;
+  transition-duration: 0.5s;
+}
+
+.headLeft > a{
+  align-self: center;
+  font-weight: bold;
+}
+
+.headRight{
+  width:100%;
+  align-items: center;
+  justify-content:space-between;
+  transition-duration: 0.4s;
+  padding:45px 45px;
+}
+
+.headRight > a{
+  height: fit-content;
+}
+
+.headRight > a:hover, #lang:hover{
+  color:#61b3ff;
+}
+
+#lang{
+  color:#ffffff;
+  cursor: pointer;
+}
+
+.arrowDown{
+  width:20px;
+  height:16px;
+  background: center/cover url('icon/arrowDown.png');
+  /* transform: rotateZ(90deg); */
+}
+
+#cart{
+  background:url('icon/cart.png') center/cover;
+  width:25px;
+  height:30px;
+  cursor: pointer;
+}
+
+#iconBurger{
+  width:30px;
+  height:30px;
+  cursor: pointer;
+  transition-duration: 0.8s;
+  transition-timing-function:ease-in-out;
+  z-index: 3;
+}
+
+#iconBurger > div:nth-child(1){
+  width:85%;
+  border-top:2px solid white;
+  margin-top:6px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-property: width, transform;
+}
+
+#iconBurger > div:nth-child(2){
+  width: 60%;
+  border-top:2px solid white;
+  margin-top:6px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-property: width, visibility, opacity;
+}
+
+#iconBurger > div:nth-child(3){
+  width: 40%;
+  border-top:2px solid white;
+  margin-top:6px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-property: width, transform;
+}
+
+.headMiddle{
+  width: 400px;
+  height:350px;
+  margin:150px 10%;
+}
+
+h1{
+  color:#ffffff;
+  font-size:60px;
+  margin-bottom:50px;
+  font-weight:initial;
+}
+
+.contentInput{
+  width:fit-content;
+  height:40px;
+  display:flex;
+}
+
+.contentButtSearch{
+  background-color: white;
+  width:40px;
+  height:40px;
+  margin-left:3px;
+  border-radius:18px 0 0 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttonSearch{
+  background: url('icon/magnifier.png') center/cover no-repeat;
+  width:22px;
+  height:25px;
+  margin-left:5px;
+  cursor: pointer;
+}
+
+.contentInput > input{
+  border:none;
+  width:220px;
+  border-radius:0 20px 20px 0;
+  font-size:17px;
+  padding-left: 10px;
+}
+
+.contentInput > input:focus{
+  outline: none;
+}
+
+/*** Menu burger ***/
+#backgroundMenu{
+  background-color: #000000c7;
+  height:100%;
+  width:100%;
+  position: fixed;
+  top:0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+}
+
+#menuBurger{
+  background-color:white;
+  width:350px;
+  height:100%;
+  position: fixed;
+  right:-350px;
+  top:0;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+  transition-property: transform;
+  z-index:2;
+}
+
+#menuBurger > h3{
+  padding-left:20px;
+  font-size:17px;
+}
+
+#menuBurger > ul{
+  list-style-type: none;
+  font-size:15px;
+  padding:0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+#menuBurger > ul > li{
+  padding: 10px 0 10px 20px;
+  margin:3px 0 3px 0;
+}
+
+#menuBurger > ul > li:hover{
+  background-color: #1975d140;
+}
+
+#menuBurger > hr{
+  border-top:none;
+}
+
+/*** Messtechnik ***/
+.mainMarge{
+  margin:90px 10% 0;
+  transition-duration: 0.5s;
+  transition-property: margin-left;
+}
+
+.titleTop{
+  width:560px;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+}
+
+.containerMess{
+  height:400px;
+}
+
+.contentMessLeft{
+  width:35%;
+  margin-right:7%;
+  transition-duration: 0.5s;
+  transition-property: width;
+}
+
+.contentMessRight{
+  width:33%;
+  position:relative;
+  transition-duration: 0.5s;
+}
+
+.posDecoSquare1{
+  top:-80px;
+  right:-160px;
+}
+
+/*** Messtechnik2 ***/
+.containerMess2{
+  height:960px;
+  justify-content: center;
+}
+
+.contentMessLeft2{
+  width:350px;
+  height:fit-content;
+  margin-top:180px;
+  position:relative;
+  left:40px;
+}
+
+.contentMessLeft2 > p{
+  font-size:16px;
+  color:#1975d1;
+  font-weight:bold;
+  transition-duration: 0.5s;
+  transition-property: font-size;
+}
+
+.contentMessLeft2 > h2{
+  margin:0;
+}
+
+.contentMessRight2{
+  width:100%;
+  height:100%;
+  margin-left:4%;
+}
+
+.contentImg{
+  margin: auto;
+  width: 810px;
+  height:100%;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card1Mess{
+  width:380px;
+  height:480px;
+  margin-right:1vw;
+  transition-duration: 0.5s;
+  transition-property: width, height, box-shadow;
+  position:relative;
+  cursor: pointer;
+}
+
+.card2Mess{
+  width:380px;
+  height:380px;
+  transition-duration: 0.5s;
+  transition-property: width, height, box-shadow;
+  position:relative;
+  top:40px;
+  cursor: pointer;
+}
+
+.card3Mess{
+  width:380px;
+  height:380px;
+  margin-right:1vw;
+  transition-duration: 0.5s;
+  transition-property: width, height, box-shadow;
+  position:relative;
+  top:30px;
+  cursor: pointer;
+}
+
+.card4Mess{
+  width:380px;
+  height:480px;
+  position:relative;
+  bottom:30px;
+  transition-duration: 0.5s;
+  transition-property: width, height, box-shadow;
+  cursor: pointer;
+}
+
+.card1Mess:hover, .card4Mess:hover{
+  width:400px;
+  height:500px;
+  box-shadow: 6px 6px 8px 0 #000000a1;
+}
+
+.card2Mess:hover, .card3Mess:hover{
+  width:400px;
+  height:400px;
+  box-shadow: 6px 6px 8px 0 #000000a1;
+}
+
+.gradientMess{
+  background:linear-gradient(to top, #0000ff9a, #00000000);
+  width: 100%;
+  height:100%;
+  position: relative;
+}
+
+.gradientMess > div{
+  position:absolute;
+  bottom:10px;
+  color:#ffffffe3;
+  margin-left:30px;
+}
+
+.gradientMess > div > h3{
+  margin:0;
+  padding:0;
+  font-size:37px;
+  font-weight: initial;
+  letter-spacing: 3px;
+}
+
+/*** Branche ***/
+
+.contentTitle{
+  margin-top:130px;
+  width:520px;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  color:#115ba0;
+}
+
+.posDecoSquare2{
+  position:absolute;
+  top:-70px;
+  left:-30px;
+}
+
+.containerBranche{
+  margin-top:80px;
+  justify-content: end;
+}
+
+.contentBrancheLeft{
+  width:35%;
+  transition-duration: 0.5s;
+  transition-property: width;
+}
+
+.contentBrancheRight{
+  width:40%;
+  margin-left:5%;
+  transition-duration: 0.5s;
+  transition-property: width;
+}
+
+.bold{
+  font-weight: bold;
+  width:300px;
+}
+
+.contentArrow{
+  margin:auto;
+}
+
+#arrLeft{
+  margin-right:18px;
+  cursor: pointer;
+  background: url('icon/arrDisabled.png') center/cover;
+  transform: rotate(180deg);
+  width:26px;
+  height:15px;
+}
+
+#arrRight{
+  cursor: pointer;
+  background: url('icon/arr.png') center/cover;
+  width:26px;
+  height:15px;
+}
+
+.carrousel{
+  height:420px;
+  overflow:hidden;
+  position:relative;
+}
+
+#contentCard{
+  height:420px;
+  position:relative;
+  left:1100px;
+  justify-content: center;
+  transition-property: left;
+  transition-duration: 0.5s;
+}
+
+.card{
+  width:270px;
+  min-width:270px;
+  height:380px;
+  position:relative;
+  margin-right:10px;
+  transition-property: min-width, width, height, box-shadow;
+  transition-duration: 0.5s;
+  cursor:pointer;
+}
+
+.card:hover{
+  min-width: 280px;
+  width:280px;
+  height:400px;
+  box-shadow: 6px 6px 8px 0 #000000a1;
+}
+
+.contentGradient{
+  background:linear-gradient(to top, #0000ff9a, #0000ff00);
+  height:100%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+}
+
+.contentGradient > div{
+  color:#ffffffe3;
+  position:absolute;
+  bottom:0px;
+  left:15px;
+  width:200px;
+}
+
+.contentGradient > div > h3{
+  font-size:30px;
+  font-weight: unset;
+}
+
+/*** Umweltdaten ***/
+
+.containerUmweltdaten{
+  background-color:#006eff1e;
+  margin:60px 4%;
+}
+
+.titleUmweltdaten{
+  color:#115ba0;
+  width:450px;
+  padding:10px 0 0 40px;
+  letter-spacing: 1px;
+}
+
+.contentUmweltLeft{
+  width:35%;
+}
+
+.contentUmweltRight{
+  width:35%;
+  margin-left:4%;
+  margin-right:5%;
+}
+
+.containerLogo{
+  height:100px;
+  width:65%;
+  margin-left:21%;
+  padding-bottom:30px;
+  position:relative;
+  justify-content: space-around;
+}
+
+.logoArrow{
+  background: center/contain url("icon/arrowBottRight.png");
+  width:30px;
+  height:30px;
+  transform: rotate(-90deg);
+}
+
+.contentLogo{
+  width:fit-content;
+  height:80px;
+}
+
+.sizeLogo{
+  width:65px;
+  height:60px;
+}
+
+.wind{
+  background: no-repeat left/50px url('icon/wind.png');
+}
+
+.water{
+  background: no-repeat left/50px url('icon/water.png');
+}
+
+.physique{
+  background: no-repeat left/50px url('icon/physique.png');
+}
+
+.phone{
+  background: no-repeat left/50px url('icon/phone.png');
+}
+
+.leaf{
+  background: no-repeat left/50px url('icon/leaf.png');
+}
+
+.tree{
+  background: no-repeat left/contain url('icon/tree.png');
+}
+
+/*** Dienstleistungen ***/
+
+.titleDienst{
+  color:#115ba0;
+  width:600px;
+  letter-spacing: 1px;
+}
+
+.containerDienst{
+  margin-bottom:150px;
+}
+
+.contentTxtDienst{
+  width:40%;
+  align-self: center;
+}
+
+.card1Dienst{
+  background: url('image/messtechnik.jpg') center/cover;
+  width:380px;
+  height:380px;
+  transition-duration: 0.5s;
+  transition-property: width, height, box-shadow;
+}
+
+.card1Dienst:hover{
+  width:400px;
+  height:400px;
+  box-shadow: 6px 6px 8px 0 #000000a1;
+  cursor: pointer;
+}
+
+.card2Dienst{
+  background: url('image/regeltechnik.jpg') center/cover;
+  width:380px;
+  height:480px;
+  margin-left:1vw;
+  transition-duration: 0.5s;
+  transition-property: width, height, box-shadow;
+}
+
+.card2Dienst:hover{
+  width:400px;
+  height:500px;
+  box-shadow: 6px 6px 8px 0 #000000a1;
+  cursor: pointer;
+}
+
+.containerCardDienst{
+  height:550px;
+  align-items: center;
+  margin-left:3%;
+}
+
+.decoSquareBig{
+  background: url('image/square_dot.jpg') center/contain;
+  position: absolute;
+  height:680px;
+  width:500px;
+  right:-60px;
+}
+
+.gradientDienst{
+  background:linear-gradient(to top, #0000ff9a, #0000ff00);
+  width: 100%;
+  height:100%;
+  position: absolute;
+  bottom:0;
+  color:#ffffffe3;
+}
+
+.gradientDienst > div{
+  position:absolute;
+  bottom:10px;
+  margin-left:30px;
+  width:250px;
+}
+
+.gradientDienst > div> h3{
+  font-size:30px;
+  font-weight: unset;
+  letter-spacing: 3px;
+}
+
+/*** Positionierung ***/
+
+.positionierung{
+  width:77%;
+  background-color: #006eff1e;
+  margin-left:200px;
+  margin-bottom:150px;
+  transition-duration: 0.5s;
+  transition-property: margin, width;
+}
+
+.titlePosition{
+  color:#115ba0;
+  width:500px;
+  padding:50px 0 0;
+  position:relative;
+  right:145px;
+  letter-spacing: 2px;
+  transition-duration: 0.5s;
+  transition-property: right;
+}
+
+.contentPosTxt{
+  width:70%;
+  margin-left:55px;
+  margin-bottom:40px;
+}
+
+.contentLink{
+  display: inline-block;
+  position:relative;
+  padding:0 3px;
+}
+
+.contentLink > a{
+  position:relative;
+  z-index: 1;
+  transition-duration: 0.5s;
+  color:black;
+}
+
+.lineLink{
+  background-color: #0054ad;
+  width:100%;
+  height:3px;
+  transition-duration: 0.5s;
+  position:absolute;
+  left:0;
+  bottom:3px;
+}
+
+.containerPosInfo{
+  width:100%;
+  height:200px;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.containerPosInfo > div {
+  width:22%;
+  height:180px;
+  border-top:2px outset #115ba0;
+  color:#115ba0;
+}
+
+.containerPosInfo > div:first-child{
+  margin-left:2%;
+}
+
+.containerPosInfo > div:last-child{
+  margin-right:2%;
+}
+
+.containerPosInfo > div > p:nth-child(2){ /* Number */
+  font-size:35px;
+  font-weight: bold;
+  margin:0;
+}
+
+.containerPosInfo > div > img{
+  margin-top:21px;
+  margin-bottom:13px;
+}
+
+.containerPosInfo > div:last-child > p:first-child{ /* € */
+  font-size:20px;
+}
+
+/*** Empfohlene ***/
+
+.lastTitle{
+  letter-spacing: 1px;
+  margin:0;
+}
+
+.lastTitle + p{
+  color:#115ba0;
+  width:500px;
+}
+
+.containerEmpfohlene{
+  width: 100%;
+  height:fit-content;
+  margin-top:50px;
+  margin-bottom:220px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contentVideo{
+  width:360px;
+  height:250px;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.video1{
+  background: url('video/video1.jpg') center/cover;
+}
+
+.video2{
+  background: url('video/video2.jpg') center/cover;
+}
+
+.video3{
+  background: url('video/video3.jpg') center/cover;
+}
+
+
+.contentVideo > div{
+  width:200px;
+  height:110px;
+  padding-left:20px;
+  background-color:#e0e8ff; 
+  position:relative;
+  top:55px;
+}
+
+.contentVideo > div > p{
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom:9px;
+  padding-right:10px;
+}
+
+.contentVideo > div > a{
+  text-decoration: none;
+}
+
+/*** Footer ***/
+
+footer{
+  background-color:#0054ad;
+  color:#c3d7e4;
+  padding-bottom:25px;
+}
+
+.paraFooterTop{
+  color:#6497c9;
+  padding-top:20px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.paraFooterTop > span{
+  text-decoration: underline 2px;
+}
+
+.contentCategoFooter{
+  margin-bottom:55px;
+}
+
+.categoFooter{
+  display: flex;
+  flex-direction: column;
+  width:fit-content;
+  white-space: nowrap;
+}
+
+.categoFooter:nth-child(1) > a,
+.categoFooter:nth-child(2) > a,
+.categoFooter:nth-child(3) > a{
+  color:#6497c9;
+  line-height: 27px;
+  text-decoration: none;
+  width: fit-content;
+  font-size:15px;
+}
+
+.categoFooter:nth-child(4) > a{
+  line-height: 27px;
+  text-decoration: none;
+  color:#c3d7e4;
+  width: fit-content;
+  font-size:15px;
+}
+
+.categoFooter:nth-child(1),
+.categoFooter:nth-child(2),
+.categoFooter:nth-child(3){
+  margin-right:16%;
+}
+
+.footerBottom{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footerBottom > div{
+  display:flex;
+  justify-content: space-between;
+  width:60%;
+  color:#6497c9;
+}
+
+.footerBottom > p{
+  white-space: nowrap;
+}
+
+/*** Responsive ***/
+/* xxl */
+@media (max-width: 1399.98px){
+
+  .headLeft > img{
+    width:210px;
+    margin-top:10px;
+  }
+
+  .headRight{
+    padding: 20px 20px;
+  }
+
+  /* Messtechnik */
+
+  .mainMarge{
+    margin:90px 4% 0;
+  }
+
+  .containerMess{
+    height:450px;
+  }
+
+  .contentMessLeft{
+    width:40%;
+  }
+  
+  .contentMessRight{
+    width:38%;
+  }
+
+  /* Messtechnik2 */
+
+  .containerMess2{
+    height:910px;
+  }
+
+  .contentMessLeft2{
+    width:300px;
+  }
+
+  .contentMessLeft2 > h2{
+    font-size:38px;
+  }
+
+  .contentImg{
+    transition-duration: 0.5s;
+    width:700px;
+    height:850px;
+  }
+
+  .card1Mess, .card4Mess{
+    width:320px;
+    height:420px;
+  }
+
+  .card2Mess, .card3Mess{
+    width:320px;
+    height:320px;
+  }
+
+  .card1Mess:hover, .card4Mess:hover{
+    width:340px;
+    height:440px;
+  }
+
+  .card2Mess:hover, .card3Mess:hover{
+    width:340px;
+    height:340px;
+  }
+
+  .gradientMess > div > h3{
+    font-size:31px;
+  }
+
+  /* Branche */
+
+  .containerBranche{
+    justify-content: center;
+  }
+
+  .contentBrancheLeft{
+    width:40%;
+  }
+
+  .contentBrancheRight{
+    width:45%;
+  }
+
+  #contentCard{
+    left:950px;
+  }
+
+  /* Dienstleistungen */
+
+  .card1Dienst{
+    width:320px;
+    height:320px;
+  }
+
+  .card2Dienst{
+    width:320px;
+    height:420px;
+  }
+
+  .card1Dienst:hover{
+    width:340px;
+    height:340px;
+  }
+
+  .card2Dienst:hover{
+    width:340px;
+    height:440px;
+  }
+
+  /* Positionierung */
+
+  .positionierung{
+    margin:0 auto 140px;
+    width:80%;
+  }
+
+  .titlePosition{
+    right:50px;
+  }
+
+  /* Empfohlene */
+
+  .contentVideo{
+    width:330px;
+    height:220px;
+  }
+
+  /* Footer */
+
+  .contentCategoFooter{
+    justify-content: space-between;
+  }
+
+  .categoFooter:nth-child(1),
+  .categoFooter:nth-child(2),
+  .categoFooter:nth-child(3){
+    margin:0;
+  }
+}
+
+
+
+
+
+
+
+
