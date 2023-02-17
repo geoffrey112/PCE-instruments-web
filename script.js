@@ -15,7 +15,7 @@
 
 
 function animIconBurgerEnter(){
-  const elemsBurger = document.querySelectorAll('#iconBurger > div')
+  const elemsBurger = document.querySelectorAll('#iconBurger > div');
   const elemBurger = Array.from(elemsBurger);
 
   elemBurger.forEach((item) => {
@@ -24,7 +24,7 @@ function animIconBurgerEnter(){
 };
   
 function animIconBurgerLeave(){
-  const elemsBurger = document.querySelectorAll('#iconBurger > div')
+  const elemsBurger = document.querySelectorAll('#iconBurger > div');
   const elemBurger = Array.from(elemsBurger);
 
   elemBurger[0].style.width = '85%';
@@ -34,6 +34,12 @@ function animIconBurgerLeave(){
 
 
 function openCloseMenuBurger(){
+  const background = document.getElementById('backgroundMenu');
+  const menuBurger = document.getElementById('menuBurger');
+  const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
+  const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)');
+  const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
+
   if(isClickIconBurger === false){
     background.style.transitionDuration = '0.4s';
     background.style.opacity = 1;
@@ -56,10 +62,6 @@ function openCloseMenuBurger(){
     if(window.innerWidth < 1399.98){
       headRight.style.padding = '45px 45px';
     }
-
-    // window.addEventListener('scroll', () => {
-    //   window.scrollTo(0,0);
-    // });
 
   }else if(isClickIconBurger === true){
     background.style.opacity = 0;
@@ -202,12 +204,7 @@ const headRight = document.getElementsByClassName('headRight')[0];
 const buttonSearch = document.getElementById('buttonSearch');
 const searchBar = document.getElementsByName('search')[0];
 
-const background = document.getElementById('backgroundMenu');
-const menuBurger = document.getElementById('menuBurger');
 const iconBurger = document.getElementById('iconBurger');
-const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
-const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)');
-const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
 let isClickIconBurger = false;
 
 
@@ -246,8 +243,6 @@ window.addEventListener('resize', () => {
   }
 });
 
-
-// Connecter local avec repo distant (remote) et push || https://kbroman.org/github_tutorial/pages/init.html
 
 
 // Before logo planet, after chevron (finir rotation hover)

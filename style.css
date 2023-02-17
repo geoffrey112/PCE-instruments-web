@@ -144,12 +144,16 @@ header{
   cursor: pointer;
 }
 
-.arrowDown{
+#lang::after{
+  /* content:'chevron ici'; */ /* add url with marge or position rel */
+}
+
+/* .arrowDown{
   width:20px;
   height:16px;
   background: center/cover url('icon/arrowDown.png');
-  /* transform: rotateZ(90deg); */
-}
+  transform: rotateZ(-180deg);
+} */
 
 #cart{
   background:url('icon/cart.png') center/cover;
