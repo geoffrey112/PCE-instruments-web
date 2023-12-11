@@ -244,16 +244,17 @@ window.addEventListener('resize', () => {
 });
 
 
-
-// Before logo planet, after chevron (finir rotation hover)
+// Before logo planet (sobre), after chevron (finir rotation hover)
 
 // Internationalization:
 // Choix des langues (Pas de drapeau car un pays n'est pas une langue | Visible et très facile à trouver)
 // Attention à l'espace supplémentaire en fonction de certaines language (modifier contenu ou taille du texte)
-// Option: (Voir pour mémoriser leur langue par défaut via cookie à leur prochain passage, détection automatique de la langue)
+// Option: (Voir pour mémoriser leur langue par défaut via cookie à leur prochain passage || détection automatique de la langue (demander à user si correct))
 
 // https://weglot.com/fr/9-tips-for-designing-a-multi-language-website/
 // Exemple: https://www.flickr.com/
+
+// (Menu lang filter blur)
 
 
 

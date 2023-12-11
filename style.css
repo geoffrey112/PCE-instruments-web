@@ -140,20 +140,36 @@ header{
 }
 
 #lang{
+  width: fit-content;
+  height:18px;
   color:#ffffff;
   cursor: pointer;
+  background-color: lightblue;
+  display:flex;
 }
 
 #lang::after{
-  /* content:'chevron ici'; */ /* add url with marge or position rel */
+  content:"";
+  background: no-repeat center/18px 18px url('icon/arrowDown.png');
+  background-color: red;
+  transform: rotate(-90deg);
+  width:18px;
+  height:18px;
+  transition-duration: 0.5s;
 }
 
-/* .arrowDown{
-  width:20px;
-  height:16px;
-  background: center/cover url('icon/arrowDown.png');
-  transform: rotateZ(-180deg);
-} */
+#lang::before{
+  content:"";
+  background: no-repeat center/18px 18px url('icon/');
+  background-color: lightcoral;
+  align-self: center;
+  width:25px;
+  height:25px;
+}
+
+#lang:hover::after{
+  transform:rotate(0);
+}
 
 #cart{
   background:url('icon/cart.png') center/cover;
@@ -516,6 +532,7 @@ h1{
 
 #contentCard{
   height:420px;
+  width:1750px;
   position:relative;
   left:1100px;
   justify-content: center;
@@ -908,6 +925,10 @@ footer{
   text-decoration: none;
   width: fit-content;
   font-size:15px;
+}
+
+.categoFooter > a:hover{
+  color:#c3d7e4;
 }
 
 .categoFooter:nth-child(4) > a{
