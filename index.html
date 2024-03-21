@@ -11,25 +11,46 @@
     <title>Produkte und Industrielösungen | PCE Instruments</title>
   </head>
   <body>
-    <!-- (Make Responsive Mobile) + add/design <a> in menuBurger + Add new logo PCE (intro + header) -->
-    
     <!-- introAnim create in JS here (cookie) -->
+
+    <!-- Rajouter menu déroulant sur onglet -->
+    <!-- (Faire Responsive Mobile) + ajouter page menu déroulant dans menuBurger -->
 
     <header>
       <div class="headTop">
         <div class="flex headLeft">
-          <img src="icon/logo-pce.png" alt="Logo de PCE Instruments">
-          <a href="index.html">Instruments</a>
+          <a href="index.html">
+            <img src="icon/main-logo-pce.png" alt="Logo de PCE Instruments">
+          </a>
         </div>
 
         <div class="flex headRight">
-          <a href="pages/produktkatTest.html">Produktkategorien</a>
-          <a href="#">Kalibrierung</a>
-          <a href="#">Themenbereiche</a>
-          <a href="#">Unternehmen</a>
-          <a href="#">Service</a>
+          <a href="pages/produktkatTest.html">Produkte</a>
+          <a href="#">Lösugen</a>
+          <a href="#">Dienstleistungen</a>
+          <a href="#">News</a>
           <a href="#">Kontakt</a>
-          <span id="lang" href="#">Deutsch</span>
+          <a href="#">Unternehmen</a>
+          <div id="contentLang">
+            <span id="lang">Deutsch</span>
+            <!-- Menu Lang -->
+            <div class="menuLang">
+              <div>
+                <div class="checked"></div>
+                <p>Français</p>
+              </div>
+              <div>
+                <div class="checked"></div>
+                <p>English</p>
+              </div>
+              <div>
+                <div class="checked currentLang"></div>
+                <p>Deutsch</p>
+              </div>
+            </div>
+            <!------>
+          </div>
+
           <div id="cart"></div>
           <div id="iconBurger">
             <div></div>

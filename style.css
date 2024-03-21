@@ -1,7 +1,7 @@
 body{
   margin:0;
   padding:0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "saira", Helvetica, Arial, sans-serif;
 }
 
 .noscript{
@@ -105,22 +105,20 @@ header{
   display: flex;
 }
 
-.headTop a{
-  color:#ffffff;
-  text-decoration: none;
+.headLeft{
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0;
 }
 
-.headLeft > img{
-  width:300px;
-  margin-left:20px;
-  margin-top:-5px;
-  align-self:flex-start;
+.headLeft > a > img{
+  width:200px;
   transition-duration: 0.5s;
 }
 
-.headLeft > a{
-  align-self: center;
-  font-weight: bold;
+.headTop a{
+  color:#ffffff;
+  text-decoration: none;
 }
 
 .headRight{
@@ -128,11 +126,12 @@ header{
   align-items: center;
   justify-content:space-between;
   transition-duration: 0.4s;
-  padding:45px 45px;
+  padding:45px 20px;
 }
 
-.headRight > a{
+.headRight > a, #lang{
   height: fit-content;
+  font-weight: bold;
 }
 
 .headRight > a:hover, #lang:hover{
@@ -144,31 +143,79 @@ header{
   height:18px;
   color:#ffffff;
   cursor: pointer;
-  background-color: lightblue;
   display:flex;
+  align-items: center;
 }
 
 #lang::after{
   content:"";
   background: no-repeat center/18px 18px url('icon/arrowDown.png');
-  background-color: red;
   transform: rotate(-90deg);
-  width:18px;
-  height:18px;
+  width:19px;
+  height:19px;
   transition-duration: 0.5s;
+  border-radius: 50%;
 }
 
 #lang::before{
   content:"";
-  background: no-repeat center/18px 18px url('icon/');
-  background-color: lightcoral;
+  background: no-repeat center/21px 21px url('icon/globe.png');
   align-self: center;
   width:25px;
   height:25px;
+  transform: rotateZ('50deg');
 }
 
 #lang:hover::after{
   transform:rotate(0);
+}
+
+.menuLang{
+  width:140px;
+  height:0;
+  background-color: #574e4ea2;
+  position: absolute;
+  animation-duration: 0.5s;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(3px);
+  overflow:hidden;
+  animation-fill-mode: forwards;
+}
+
+.menuLang > div{
+  display: flex;
+  align-items: center;
+  margin:12px 5px;
+}
+
+.openMenuLang{
+  animation-name: menuLangOpen;
+  animation-timing-function: ease;
+}
+
+.closeMenuLang{
+  animation-name: menuLangClose;
+  animation-timing-function: ease;
+}
+
+.checked{
+  width:20px;
+  height:20px;
+  margin-right:4px;
+}
+
+.currentLang{
+  background: center/cover url('icon/coche.png') no-repeat;
+}
+
+.menuLang p{
+  margin:0px;
+  color:white;
+  cursor: pointer;
+}
+
+.menuLang p:hover{
+  color:#ffffff80;
 }
 
 #cart{
@@ -176,6 +223,11 @@ header{
   width:25px;
   height:30px;
   cursor: pointer;
+}
+
+#cart:hover{
+  animation-name: animCart;
+  animation-duration: 0.7s;
 }
 
 #iconBurger{
@@ -963,6 +1015,53 @@ footer{
   white-space: nowrap;
 }
 
+@font-face {
+  font-family: 'saira';
+  src: url("fonts/SairaSemiCondensed-Medium.ttf"),
+       url("fonts/SairaSemiCondensed-Medium.woff"),
+       url("fonts/SairaSemiCondensed-Medium.woff2");
+}
+
+@keyframes menuLangOpen{
+  0%{
+    height:0;
+  }
+
+  100%{
+    height:120px;
+    display: block;
+  }
+}
+
+@keyframes menuLangClose{
+  0%{
+    height:120px;
+  }
+
+  100%{
+    height:0;
+    display: none;
+  }
+}
+
+@keyframes animCart{
+  0%{
+    transform: rotateZ(0deg);
+  }
+
+  25%{
+    transform: rotateZ(10deg);
+  }
+
+  50%{
+    transform: rotateZ(-10deg);
+  }
+
+  75%{
+    transform: rotateZ(0deg);
+  }
+}
+
 /*** Responsive ***/
 /* xxl */
 @media (max-width: 1399.98px){
@@ -1109,8 +1208,25 @@ footer{
   }
 }
 
+/* XL */
+@media (max-width: 1199.98px) {
+  
+}
 
+/* LG */
+@media (max-width: 991.98px) {
 
+}
+
+/* MD */
+@media (max-width: 767.98px) {
+
+}
+
+/* SM */
+@media (max-width: 575.98px) {
+
+}
 
 
 

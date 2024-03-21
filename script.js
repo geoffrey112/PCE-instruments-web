@@ -1,18 +1,18 @@
-(function animCart(){
-  const cart = document.getElementById('cart');
-  
-  cart.addEventListener('mouseenter', () => {
-    cart.animate([
-      { transform: 'rotateZ(0deg)'},
-      { transform: 'rotateZ(10deg)'},
-      { transform: 'rotateZ(-10deg)'},
-      { transform: 'rotateZ(0deg)'}
-    ], {
-      duration: 400
-    });
-  });
-})();
+function openMenuLang(){
+  if(isClose){
+    menuLang.classList.remove('closeMenuLang');
+    menuLang.classList.add("openMenuLang");
+    isClose = false;
+  }
+}
 
+function closeMenuLang(){
+  menuLang.classList.remove('openMenuLang');
+  menuLang.classList.add('closeMenuLang');
+  setTimeout(() => {
+    isClose = true;
+  }, 300);
+}
 
 function animIconBurgerEnter(){
   const elemsBurger = document.querySelectorAll('#iconBurger > div');
@@ -36,8 +36,8 @@ function animIconBurgerLeave(){
 function openCloseMenuBurger(){
   const background = document.getElementById('backgroundMenu');
   const menuBurger = document.getElementById('menuBurger');
-  const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
   const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)');
+  const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
   const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
 
   if(isClickIconBurger === false){
@@ -45,8 +45,7 @@ function openCloseMenuBurger(){
     background.style.opacity = 1;
     background.style.visibility = 'visible';
     menuBurger.style.transform = 'translateX(-350px)';
-    iconBurger.style.transform = 'translateX(-320px)';
-    iconBurger.style.paddingLeft = '5px'; // **
+    iconBurger.style.transform = 'translateX(-340px)';
     iconBurger.removeEventListener('mouseleave', animIconBurgerLeave);
     middleLineIconBurger.style.visibility = 'hidden';
     middleLineIconBurger.style.opacity = 0;
@@ -54,14 +53,6 @@ function openCloseMenuBurger(){
     bottomLineIconBurger.style.transform = 'rotateZ(-50deg) translate(6px, -5px)';
     document.body.style.overflowY = 'hidden';
     isClickIconBurger = true;
-
-    setTimeout(() => { // ** Fix bug transition open button
-      iconBurger.style.paddingLeft = '0';
-    },500);
-
-    if(window.innerWidth < 1399.98){
-      headRight.style.padding = '45px 45px';
-    }
 
   }else if(isClickIconBurger === true){
     background.style.opacity = 0;
@@ -77,12 +68,6 @@ function openCloseMenuBurger(){
     iconBurger.addEventListener('mouseenter', animIconBurgerEnter);
     iconBurger.addEventListener('mouseleave', animIconBurgerLeave);
     isClickIconBurger = false;
-
-    setTimeout(() => {
-      if(window.innerWidth < 1399.98){
-        headRight.style.padding = '20px 20px';
-      }
-    },200)
   }
 };
 
@@ -207,14 +192,28 @@ const searchBar = document.getElementsByName('search')[0];
 const iconBurger = document.getElementById('iconBurger');
 let isClickIconBurger = false;
 
+const contentLang = document.getElementById('contentLang');
+const menuLang = document.getElementsByClassName('menuLang')[0];
+let isClose = true;
 
-buttonSearch.addEventListener('click', redirectSearchBar);
+
+// Lock arrow when mouse hover/out in menu
+menuLang.addEventListener('mouseenter', () => {
+  document.styleSheets[0].cssRules[28].style.transform = 'rotate(0)';
+});
+
+menuLang.addEventListener('mouseleave', () => {
+  document.styleSheets[0].cssRules[28].style.transform = 'rotate(-90deg)';
+});
+
+// Return msg error
 searchBar.addEventListener('keydown', (e) => {
   if(e.key === 'Enter'){
     redirectSearchBar();
   }
 });
 
+// Disabled msg error if input not empty
 searchBar.addEventListener('input', () => {
   if(searchBar.value !== ''){
     searchBar.setCustomValidity('');
@@ -222,40 +221,36 @@ searchBar.addEventListener('input', () => {
 });
 
 
+// Open/close menu lang
+contentLang.addEventListener('mouseenter', openMenuLang);
+contentLang.addEventListener('mouseleave', closeMenuLang);
+
+// Anim icon menu & open/close menu
 iconBurger.addEventListener('mouseenter', animIconBurgerEnter);
 iconBurger.addEventListener('mouseleave', animIconBurgerLeave);
 iconBurger.addEventListener('click', openCloseMenuBurger);
 
+// Do search
+buttonSearch.addEventListener('click', redirectSearchBar);
+
+
+
+
 // Responsive headRight (for iconBurger)
-window.addEventListener('resize', () => {
-  if(isClickIconBurger === false){
-    if(window.innerWidth > 1399.98){
-      headRight.style.padding = '45px 45px';
-    }else if(window.innerWidth < 1399.98){
-      headRight.style.padding = '20px 20px';
-    }
-  }else if(isClickIconBurger === true){
-    if(window.innerWidth > 1399.98){
-      headRight.style.padding = '45px 45px';
-    }else if(window.innerWidth < 1399.98){
-      headRight.style.padding = '45px 45px';
-    }
-  }
-});
-
-
-// Before logo planet (sobre), after chevron (finir rotation hover)
-
-// Internationalization:
-// Choix des langues (Pas de drapeau car un pays n'est pas une langue | Visible et très facile à trouver)
-// Attention à l'espace supplémentaire en fonction de certaines language (modifier contenu ou taille du texte)
-// Option: (Voir pour mémoriser leur langue par défaut via cookie à leur prochain passage || détection automatique de la langue (demander à user si correct))
-
-// https://weglot.com/fr/9-tips-for-designing-a-multi-language-website/
-// Exemple: https://www.flickr.com/
-
-// (Menu lang filter blur)
-
-
+// window.addEventListener('resize', () => {
+//   if(isClickIconBurger === false){
+//     if(window.innerWidth > 1399.98){
+//       headRight.style.padding = '45px 45px';
+//     }else if(window.innerWidth < 1399.98){
+//       headRight.style.padding = '20px 20px';
+//     }
+//   }else if(isClickIconBurger === true){
+//     if(window.innerWidth > 1399.98){
+//       headRight.style.padding = '45px 45px';
+//     }else if(window.innerWidth < 1399.98){
+//       headRight.style.padding = '45px 45px';
+//     }
+//   }
+// });
 
 
