@@ -1,19 +1,3 @@
-function openMenuLang(){
-  if(isClose){
-    menuLang.classList.remove('closeMenuLang');
-    menuLang.classList.add("openMenuLang");
-    isClose = false;
-  }
-}
-
-function closeMenuLang(){
-  menuLang.classList.remove('openMenuLang');
-  menuLang.classList.add('closeMenuLang');
-  setTimeout(() => {
-    isClose = true;
-  }, 300);
-}
-
 function animIconBurgerEnter(){
   const elemsBurger = document.querySelectorAll('#iconBurger > div');
   const elemBurger = Array.from(elemsBurger);
@@ -184,34 +168,72 @@ function redirectSearchBar(){
 
 ///////////////\\\\\\\\\\\\\\\
 
-const headRight = document.getElementsByClassName('headRight')[0];
-
 const buttonSearch = document.getElementById('buttonSearch');
 const searchBar = document.getElementsByName('search')[0];
 
 const iconBurger = document.getElementById('iconBurger');
 let isClickIconBurger = false;
 
+const contentTabs = document.getElementsByClassName('contentTab');
+const contentTab = Array.from(contentTabs);
+const mainTabs = document.getElementsByClassName('mainTab');
+const mainTab = Array.from(mainTabs);
 const contentLang = document.getElementById('contentLang');
 const menuLang = document.getElementsByClassName('menuLang')[0];
-let isClose = true;
 
 
 // Lock arrow when mouse hover/out in menu
 menuLang.addEventListener('mouseenter', () => {
-  document.styleSheets[0].cssRules[28].style.transform = 'rotate(0)';
+  document.styleSheets[0].cssRules[30].style.transform = 'rotate(0)'; // lang::after
 });
 
 menuLang.addEventListener('mouseleave', () => {
-  document.styleSheets[0].cssRules[28].style.transform = 'rotate(-90deg)';
+  document.styleSheets[0].cssRules[30].style.transform = 'rotate(-90deg)';
 });
 
-// Return msg error
+
+// Open/close menu tab
+contentTab.forEach((elem, idx) => {
+  elem.addEventListener('mouseenter', () => {
+    mainTab[idx].style.transitionTimingFunction = 'ease-in-out';
+    mainTab[idx].style.transitionDuration = '0.5s';
+    mainTab[idx].style.height = `${mainTab[idx].scrollHeight}px`;
+  });
+
+  elem.addEventListener('mouseleave', () => {
+    mainTab[idx].style.transitionTimingFunction = 'ease-out';
+    mainTab[idx].style.transitionDuration = '0.3s';
+    mainTab[idx].style.height = '0';
+  });
+});
+
+
+// Open/close menu lang
+contentLang.addEventListener('mouseenter', () => {
+  menuLang.style.height = '120px';
+});
+contentLang.addEventListener('mouseleave', () => {
+  menuLang.style.height = '0px';
+});
+
+
+// Anim icon menu & open/close menu
+iconBurger.addEventListener('mouseenter', animIconBurgerEnter);
+iconBurger.addEventListener('mouseleave', animIconBurgerLeave);
+iconBurger.addEventListener('click', openCloseMenuBurger);
+
+
+// Do search (button)
+buttonSearch.addEventListener('click', redirectSearchBar);
+
+
+// Do search (input)
 searchBar.addEventListener('keydown', (e) => {
   if(e.key === 'Enter'){
     redirectSearchBar();
   }
 });
+
 
 // Disabled msg error if input not empty
 searchBar.addEventListener('input', () => {
@@ -219,20 +241,6 @@ searchBar.addEventListener('input', () => {
     searchBar.setCustomValidity('');
   }
 });
-
-
-// Open/close menu lang
-contentLang.addEventListener('mouseenter', openMenuLang);
-contentLang.addEventListener('mouseleave', closeMenuLang);
-
-// Anim icon menu & open/close menu
-iconBurger.addEventListener('mouseenter', animIconBurgerEnter);
-iconBurger.addEventListener('mouseleave', animIconBurgerLeave);
-iconBurger.addEventListener('click', openCloseMenuBurger);
-
-// Do search
-buttonSearch.addEventListener('click', redirectSearchBar);
-
 
 
 

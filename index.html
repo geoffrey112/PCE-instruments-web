@@ -13,7 +13,6 @@
   <body>
     <!-- introAnim create in JS here (cookie) -->
 
-    <!-- Rajouter menu déroulant sur onglet -->
     <!-- (Faire Responsive Mobile) + ajouter page menu déroulant dans menuBurger -->
 
     <header>
@@ -25,15 +24,51 @@
         </div>
 
         <div class="flex headRight">
-          <a href="pages/produktkatTest.html">Produkte</a>
-          <a href="#">Lösugen</a>
-          <a href="#">Dienstleistungen</a>
-          <a href="#">News</a>
-          <a href="#">Kontakt</a>
-          <a href="#">Unternehmen</a>
+          <div class="contentTab">
+            <a href="#">Produkte</a>
+            <div class="mainTab">
+              <a href="https://www.pce-instruments.com/deutsch/labortechnik-kat_13081.htm">Labortechnik</a>
+              <a href="https://www.pce-instruments.com/deutsch/messtechnik-kat_10035.htm">Messtechnik</a>
+              <a href="https://www.pce-instruments.com/deutsch/regeltechnik-kat_11834.htm">Regeltechnik</a>
+              <a href="https://www.pce-instruments.com/deutsch/waegetechnik-kat_10037.htm">Wägetechnik</a>
+            </div>
+          </div>
+          <div class="contentTab">
+            <a href="#">Lösugen</a>
+            <div class="mainTab">
+              <a href="https://www.pce-instruments.com/deutsch/loesungen/elektrische-messtechnik-kat_162550.htm">Elektrische Messtechnik</a>
+              <a href="https://www.pce-instruments.com/deutsch/loesungen/feuchtemesstechnik-kat_162551.htm">Feuchtemesstechnik</a>
+              <a href="https://www.pce-instruments.com/f/t/kontinuierliche-feuchtemessung.htm">Feuchtemessung</a>
+              <a href="https://www.pce-instruments.com/f/t/gaswarntechnik.htm">Gaswarntechnik</a>
+              <a href="https://www.pce-instruments.com/f/t/industrielle-wiegetechnik.htm">Industrielle Wiegetechnik</a>
+            </div>
+          </div>
+          <div class="contentTab">
+            <a href="#">Dienstleistungen</a>
+            <div class="mainTab">
+              <a href="https://www.pce-instruments.com/deutsch/kalibrierung-kat_162801.htm">Kalibrierung</a>
+              <a href="https://www.pce-instruments.com/f/t/rd/pruefgeraete-entwicklung-produktion.html">Entwicklung und Produktion</a>
+            </div>
+          </div>
+          <div class="contentTab">
+            <a href="#">Service</a>
+            <div class="mainTab">
+              <a href="https://www.pce-instruments.com/deutsch/konto">Kundenkonto</a>
+              <a href="https://www.pce-instruments.com/deutsch/download-win_4.htm">Download</a>
+              <a href="https://www.pce-instruments.com/deutsch/faq-text_59.htm">FAQ</a>
+            </div>
+          </div>
+          <div class="contentTab">
+            <a href="#">Unternehmen</a>
+            <div class="mainTab">
+              <a href="https://www.pce-instruments.com/deutsch/kontakt">Kontakt</a>
+              <a href="https://www.pce-instruments.com/deutsch/ueber-pce">Über PCE</a>
+              <a href="https://www.pce-instruments.com/deutsch/die-geschichte-der-pce-instruments-text_105.htm">Die Geschichte der PCE Instruments</a>
+              <a href="https://www.pce-instruments.com/deutsch/karriere-win_18.htm">Karriere</a>
+            </div>
+          </div>
           <div id="contentLang">
             <span id="lang">Deutsch</span>
-            <!-- Menu Lang -->
             <div class="menuLang">
               <div>
                 <div class="checked"></div>
@@ -48,7 +83,6 @@
                 <p>Deutsch</p>
               </div>
             </div>
-            <!------>
           </div>
 
           <div id="cart"></div>
@@ -75,32 +109,42 @@
     <!-- Menu burger -->
     <div id="backgroundMenu"></div>
     <div id="menuBurger">
-      <h3>Catégorie</h3>
-      <ul>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-      </ul>
+      <h3>Produkte</h3>
+      <a href="https://www.pce-instruments.com/deutsch/labortechnik-kat_13081.htm">Labortechnik</a>
+      <a href="https://www.pce-instruments.com/deutsch/messtechnik-kat_10035.htm">Messtechnik</a>
+      <a href="https://www.pce-instruments.com/deutsch/regeltechnik-kat_11834.htm">Regeltechnik</a>
+      <a href="https://www.pce-instruments.com/deutsch/waegetechnik-kat_10037.htm">Wägetechnik</a>
 
       <hr>
 
-      <h3>Catégorie</h3>
-      <ul>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-      </ul>
+      <h3>Lösungen</h3>
+      <a href="https://www.pce-instruments.com/deutsch/loesungen/elektrische-messtechnik-kat_162550.htm">Elektrische Messtechnik</a>
+      <a href="https://www.pce-instruments.com/deutsch/loesungen/feuchtemesstechnik-kat_162551.htm">Feuchtemesstechnik</a>
+      <a href="https://www.pce-instruments.com/f/t/kontinuierliche-feuchtemessung.htm">Feuchtemessung</a>
+      <a href="https://www.pce-instruments.com/f/t/gaswarntechnik.htm">Gaswarntechnik</a>
+      <a href="https://www.pce-instruments.com/f/t/industrielle-wiegetechnik.htm">Industrielle Wiegetechnik</a>
 
       <hr>
 
-      <h3>Catégorie</h3>
-      <ul>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-        <li>Sous catégorie</li>
-      </ul>
+      <h3>Dienstleistungen</h3>
+      <a href="https://www.pce-instruments.com/deutsch/kalibrierung-kat_162801.htm">Kalibrierung</a>
+      <a href="https://www.pce-instruments.com/f/t/rd/pruefgeraete-entwicklung-produktion.html">Entwicklung und Produktion</a>
+
+      <hr>
+
+      <h3>Service</h3>
+      <a href="https://www.pce-instruments.com/deutsch/konto">Kundenkonto</a>
+      <a href="https://www.pce-instruments.com/deutsch/download-win_4.htm">Download</a>
+      <a href="https://www.pce-instruments.com/deutsch/faq-text_59.htm">FAQ</a>
+
+      <hr>
+
+      <h3>Unternehmen</h3>
+      <a href="https://www.pce-instruments.com/deutsch/kontakt">Kontakt</a>
+      <a href="https://www.pce-instruments.com/deutsch/ueber-pce">Über PCE</a>
+      <a href="https://www.pce-instruments.com/deutsch/die-geschichte-der-pce-instruments-text_105.htm">Die Geschichte der PCE Instruments</a>
+      <a href="https://www.pce-instruments.com/deutsch/karriere-win_18.htm">Karriere</a>
+
     </div>
 
     <!--- Messtechnik --->

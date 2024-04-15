@@ -129,12 +129,29 @@ header{
   padding:45px 20px;
 }
 
-.headRight > a, #lang{
+.contentTab > a, #lang{
   height: fit-content;
   font-weight: bold;
 }
 
-.headRight > a:hover, #lang:hover{
+.mainTab{
+  width:fit-content;
+  height:0;
+  background-color: #574e4ea2;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(3px);
+  overflow:hidden;
+  color:white;
+  padding:0 20px;
+}
+
+.mainTab > a{
+  display:block;
+  margin:16px 10px;
+}
+
+.headRight a:hover, #lang:hover{
   color:#61b3ff;
 }
 
@@ -175,27 +192,16 @@ header{
   height:0;
   background-color: #574e4ea2;
   position: absolute;
-  animation-duration: 0.5s;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(3px);
   overflow:hidden;
-  animation-fill-mode: forwards;
+  transition-duration: 0.5s;
 }
 
 .menuLang > div{
   display: flex;
   align-items: center;
   margin:12px 5px;
-}
-
-.openMenuLang{
-  animation-name: menuLangOpen;
-  animation-timing-function: ease;
-}
-
-.closeMenuLang{
-  animation-name: menuLangClose;
-  animation-timing-function: ease;
 }
 
 .checked{
@@ -214,7 +220,7 @@ header{
   cursor: pointer;
 }
 
-.menuLang p:hover{
+.menuLang p:hover, .mainTab > p:hover{
   color:#ffffff80;
 }
 
@@ -339,6 +345,7 @@ h1{
   transition-timing-function: ease-in-out;
   transition-property: transform;
   z-index:2;
+  overflow-y: scroll;
 }
 
 #menuBurger > h3{
@@ -346,25 +353,15 @@ h1{
   font-size:17px;
 }
 
-#menuBurger > ul{
-  list-style-type: none;
-  font-size:15px;
-  padding:0;
-  margin: 0;
-  white-space: nowrap;
-}
-
-#menuBurger > ul > li{
+#menuBurger > a{
+  display: block;
+  color:black;
   padding: 10px 0 10px 20px;
-  margin:3px 0 3px 0;
+  font-size: 15px;
 }
 
-#menuBurger > ul > li:hover{
+#menuBurger > a:hover{
   background-color: #1975d140;
-}
-
-#menuBurger > hr{
-  border-top:none;
 }
 
 /*** Messtechnik ***/
@@ -1022,27 +1019,6 @@ footer{
        url("fonts/SairaSemiCondensed-Medium.woff2");
 }
 
-@keyframes menuLangOpen{
-  0%{
-    height:0;
-  }
-
-  100%{
-    height:120px;
-    display: block;
-  }
-}
-
-@keyframes menuLangClose{
-  0%{
-    height:120px;
-  }
-
-  100%{
-    height:0;
-    display: none;
-  }
-}
 
 @keyframes animCart{
   0%{
@@ -1227,8 +1203,5 @@ footer{
 @media (max-width: 575.98px) {
 
 }
-
-
-
 
 
