@@ -18,13 +18,8 @@ function animIconBurgerLeave(){
 
 
 function openCloseMenuBurger(){
-  const background = document.getElementById('backgroundMenu');
-  const menuBurger = document.getElementById('menuBurger');
-  const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)');
-  const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
-  const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
 
-  if(isClickIconBurger === false){
+  if(!isMenuOpened){
     background.style.transitionDuration = '0.4s';
     background.style.opacity = 1;
     background.style.visibility = 'visible';
@@ -38,9 +33,8 @@ function openCloseMenuBurger(){
     topLineIconBurger.style.transform = 'rotateZ(50deg) translate(6px, 5px)';
     bottomLineIconBurger.style.transform = 'rotateZ(-50deg) translate(6px, -5px)';
     document.body.style.overflowY = 'hidden';
-    isClickIconBurger = true;
-
-  }else if(isClickIconBurger === true){
+    isMenuOpened = true;
+  }else if(isMenuOpened){
     background.style.opacity = 0;
     background.style.visibility = 'hidden';
     menuBurger.style.transform = 'translateX(0)';
@@ -50,10 +44,9 @@ function openCloseMenuBurger(){
     topLineIconBurger.style.transform = 'rotateZ(0deg) translate(0, 0)';
     bottomLineIconBurger.style.transform = 'rotateZ(0deg) translate(0, 0)';
     document.body.style.overflowY = 'scroll';
-
     iconBurger.addEventListener('mouseenter', animIconBurgerEnter);
     iconBurger.addEventListener('mouseleave', animIconBurgerLeave);
-    isClickIconBurger = false;
+    isMenuOpened = false;
   }
 };
 
@@ -170,11 +163,17 @@ function redirectSearchBar(){
 
 ///////////////\\\\\\\\\\\\\\\
 
+const background = document.getElementById('backgroundMenu');
+const menuBurger = document.getElementById('menuBurger');
+const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)');
+const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
+const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
+
 const buttonSearch = document.getElementById('buttonSearch');
 const searchBar = document.getElementsByName('search')[0];
 
 const iconBurger = document.getElementById('iconBurger');
-let isClickIconBurger = false;
+let isMenuOpened = false;
 
 const contentTabs = document.getElementsByClassName('contentTab');
 const contentTab = Array.from(contentTabs);
@@ -246,21 +245,13 @@ searchBar.addEventListener('input', () => {
 
 
 
-// Responsive headRight (for iconBurger)
-// window.addEventListener('resize', () => {
-//   if(isClickIconBurger === false){
-//     if(window.innerWidth > 1399.98){
-//       headRight.style.padding = '45px 45px';
-//     }else if(window.innerWidth < 1399.98){
-//       headRight.style.padding = '20px 20px';
-//     }
-//   }else if(isClickIconBurger === true){
-//     if(window.innerWidth > 1399.98){
-//       headRight.style.padding = '45px 45px';
-//     }else if(window.innerWidth < 1399.98){
-//       headRight.style.padding = '45px 45px';
-//     }
-//   }
-// });
+// Responsive (for menuBurger)
+window.addEventListener('resize', () => {
+  if(isMenuOpened === true && window.innerWidth > 767.98){
+    console.log('> 767.98px');
+    openCloseMenuBurger();
+  }
+});
+
 
 
