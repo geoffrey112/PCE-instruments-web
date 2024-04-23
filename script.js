@@ -30,6 +30,8 @@ function openCloseMenuBurger(){
     background.style.visibility = 'visible';
     menuBurger.style.transform = 'translateX(-350px)';
     iconBurger.style.transform = 'translateX(-340px)';
+    iconBurger.style.transitionDelay = "0s";
+    iconBurger.style.transitionDuration = "0.8s";
     iconBurger.removeEventListener('mouseleave', animIconBurgerLeave);
     middleLineIconBurger.style.visibility = 'hidden';
     middleLineIconBurger.style.opacity = 0;
@@ -196,7 +198,7 @@ menuLang.addEventListener('mouseleave', () => {
 contentTab.forEach((elem, idx) => {
   elem.addEventListener('mouseenter', () => {
     mainTab[idx].style.transitionTimingFunction = 'ease-in-out';
-    mainTab[idx].style.transitionDuration = '0.5s';
+    mainTab[idx].style.transitionDuration = '0.4s';
     mainTab[idx].style.height = `${mainTab[idx].scrollHeight}px`;
   });
 

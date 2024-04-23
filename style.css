@@ -126,7 +126,7 @@ header{
   align-items: center;
   justify-content:space-between;
   transition-duration: 0.4s;
-  padding:45px 20px;
+  padding:0 20px;
 }
 
 .contentTab > a, #lang{
@@ -237,12 +237,14 @@ header{
 }
 
 #iconBurger{
-  width:30px;
+  width:0px;
   height:30px;
   cursor: pointer;
   transition-duration: 0.8s;
   transition-timing-function:ease-in-out;
   z-index: 3;
+  opacity: 0;
+  visibility: hidden;
 }
 
 #iconBurger > div:nth-child(1){
@@ -1047,10 +1049,6 @@ footer{
     margin-top:10px;
   }
 
-  .headRight{
-    padding: 20px 20px;
-  }
-
   /* Messtechnik */
 
   .mainMarge{
@@ -1191,12 +1189,33 @@ footer{
 
 /* LG */
 @media (max-width: 991.98px) {
-
+  .headRight{
+    padding:0 8px;
+  }
 }
 
 /* MD */
 @media (max-width: 767.98px) {
+  
+  .headRight{
+    justify-content:end;
+  }
 
+  .displayResp{
+    display: none;
+  }
+
+  #contentLang, #cart, #iconBurger{
+    margin:0 20px;
+    transition-duration: 0.4s;
+    transition-delay: 0.3s;
+  }
+
+  #iconBurger{
+    width: 30px;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 /* SM */
