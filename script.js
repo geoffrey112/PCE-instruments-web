@@ -244,7 +244,6 @@ searchBar.addEventListener('input', () => {
 });
 
 
-
 // Responsive (for menuBurger)
 window.addEventListener('resize', () => {
   if(isMenuOpened === true && window.innerWidth > 767.98){

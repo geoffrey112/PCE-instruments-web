@@ -380,7 +380,8 @@ h1{
 }
 
 .containerMess{
-  height:400px;
+  height:fit-content;
+  margin-bottom:150px;
 }
 
 .contentMessLeft{
@@ -548,6 +549,20 @@ h1{
   margin-left:5%;
   transition-duration: 0.5s;
   transition-property: width;
+}
+
+.contTxtArrow{
+  justify-content: flex-end;
+  transition-duration: 0.5s;
+}
+
+.contTxtArrow > div{
+  width:80%;
+  transition-duration: 0.5s;
+}
+
+.contTxtArrow > div > div{
+  width:350px;
 }
 
 .bold{
@@ -1055,16 +1070,16 @@ footer{
     margin:90px 4% 0;
   }
 
-  .containerMess{
-    height:450px;
-  }
-
   .contentMessLeft{
     width:40%;
   }
   
   .contentMessRight{
     width:38%;
+  }
+
+  .posDecoSquare1{
+    right:-130px;
   }
 
   /* Messtechnik2 */
@@ -1123,6 +1138,14 @@ footer{
 
   .contentBrancheRight{
     width:45%;
+  }
+
+  .contTxtArrow{
+    justify-content: flex-start;
+  }
+
+  .contTxtArrow > div{
+    margin-left:5%;
   }
 
   #contentCard{
@@ -1192,6 +1215,61 @@ footer{
   .headRight{
     padding:0 8px;
   }
+
+  /* Messtechnik2 */
+
+  .containerMess2{
+    flex-direction: column;
+    align-items: center;
+    height:fit-content;
+  }
+
+  .contentMessLeft2{
+    width:500px;
+    text-align: center;
+    left:0;
+    margin-bottom:30px;
+    margin-top:0;
+  }
+
+  .contentMessRight2{
+    margin-left:0;
+  }
+  
+  .card1Mess{
+    margin-right:20px;
+  }
+  
+  .card1Mess, .card4Mess{
+    width:300px;
+    height:400px;
+  }
+
+  .card2Mess, .card3Mess{
+    width:300px;
+    height:300px;
+  }
+
+  .card1Mess:hover, .card4Mess:hover{
+    width:320px;
+    height:420px;
+  }
+
+  .card2Mess:hover, .card3Mess:hover{
+    width:320px;
+    height:320px;
+  }
+
+  /* Branche */
+
+  .contentBrancheLeft{
+    width:80%;
+  }
+
+  .contTxtArrow > div{
+    margin-left:0;
+  }
+
 }
 
 /* MD */
@@ -1216,10 +1294,118 @@ footer{
     opacity: 1;
     visibility: visible;
   }
+
+  /* Messtechnik */
+
+  .titleTop{
+    width:100%;
+  }
+
+  .containerMess{
+    height:fit-content;
+  }
+
+  .contentMessLeft{
+    width: 45%;
+  }
+
+  .contentMessRight{
+    width:43%;
+  }
+
+  .posDecoSquare1{
+    right:-50px;
+  }
+
+  /* Messtechnik2 */
+
+  .contentMessLeft2{
+    width:400px;
+  }
+
+  .contentImg{
+    width:540px;
+    height:720px;
+  }
+
+  .card1Mess, .card4Mess{
+    width:250px;
+    height:350px;
+  }
+
+  .card2Mess, .card3Mess{
+    width:250px;
+    height:250px;
+  }
+
+  .card1Mess:hover, .card4Mess:hover{
+    width:270px;
+    height:370px;
+  }
+
+  .card2Mess:hover, .card3Mess:hover{
+    width:270px;
+    height:270px;
+  }
+
 }
 
 /* SM */
 @media (max-width: 575.98px) {
+  h2{
+    font-size: 38px;
+  }
+
+  .containerMess{
+    flex-direction: column;
+    position: relative;
+  }
+
+  .contentMessLeft, .contentMessRight{
+    width:100%;
+    position: static;
+  }
+
+  .posDecoSquare1{
+    right:-10px;
+  }
+
+  /* Messtechnik2 */
+
+  .contentImg{
+    width:480px;
+    height:1550px;
+  }
+
+  .card1Mess, .card2Mess, .card3Mess, .card4Mess{
+    margin:0;
+    top:0;
+    bottom:0;
+  } 
+
+  .card2Mess, .card3Mess{
+    height:350px;
+  }
+
+  .card2Mess:hover, .card3Mess:hover{
+    width:270px;
+    height:370px;
+  }
+
+  /* Branche */
+
+  .containerBranche{
+    flex-direction: column;
+  }
+
+  .contentBrancheLeft{
+    width:100%;
+  }
+
+  .contentBrancheRight{
+    width:100%;
+    margin:0;
+  }
 
 }
 
