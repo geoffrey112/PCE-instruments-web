@@ -551,18 +551,9 @@ h1{
   transition-property: width;
 }
 
-.contTxtArrow{
-  justify-content: flex-end;
-  transition-duration: 0.5s;
-}
-
-.contTxtArrow > div{
-  width:80%;
-  transition-duration: 0.5s;
-}
-
 .contTxtArrow > div > div{
-  width:350px;
+  width:400px;
+  justify-content: space-between;
 }
 
 .bold{
@@ -571,13 +562,13 @@ h1{
 }
 
 .contentArrow{
-  margin:auto;
+  margin:auto 0 auto 0px;
 }
 
 #arrLeft{
   margin-right:18px;
   cursor: pointer;
-  background: url('icon/arrDisabled.png') center/cover;
+  background: url('icon/arr.png') center/cover;
   transform: rotate(180deg);
   width:26px;
   height:15px;
@@ -585,24 +576,22 @@ h1{
 
 #arrRight{
   cursor: pointer;
-  background: url('icon/arr.png') center/cover;
+  background: url('icon/arrDisabled.png') center/cover;
   width:26px;
   height:15px;
 }
 
 .carrousel{
-  height:420px;
-  overflow:hidden;
-  position:relative;
+  height:440px;
+  width:100%;
+  overflow: hidden;
 }
 
 #contentCard{
-  height:420px;
-  width:1750px;
+  height:410px;
+  width:fit-content;
   position:relative;
-  left:1100px;
-  justify-content: center;
-  transition-property: left;
+  left:70%;
   transition-duration: 0.5s;
 }
 
@@ -1140,18 +1129,6 @@ footer{
     width:45%;
   }
 
-  .contTxtArrow{
-    justify-content: flex-start;
-  }
-
-  .contTxtArrow > div{
-    margin-left:5%;
-  }
-
-  #contentCard{
-    left:950px;
-  }
-
   /* Dienstleistungen */
 
   .card1Dienst{
@@ -1264,10 +1241,6 @@ footer{
 
   .contentBrancheLeft{
     width:80%;
-  }
-
-  .contTxtArrow > div{
-    margin-left:0;
   }
 
 }
@@ -1386,7 +1359,7 @@ footer{
   .card2Mess, .card3Mess{
     height:350px;
   }
-
+ 
   .card2Mess:hover, .card3Mess:hover{
     width:270px;
     height:370px;
@@ -1394,7 +1367,7 @@ footer{
 
   /* Branche */
 
-  .containerBranche{
+  .containerBranche > div{
     flex-direction: column;
   }
 
@@ -1409,4 +1382,12 @@ footer{
 
 }
 
-
+/* XS */
+@media (max-width: 430px){
+  .contTxtArrow > div > div{
+    background-color: lightblue;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+  }
+}

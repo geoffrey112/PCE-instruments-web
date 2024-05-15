@@ -73,39 +73,37 @@ function redirectSearchBar(){
   const arrowLeft = document.getElementById('arrLeft');
   const arrowRight = document.getElementById('arrRight');
   const contentCard = document.getElementById('contentCard');
+  const defaultPos = Math.round(contentCard.getBoundingClientRect().right);
+  let currentPos = Math.round(contentCard.getBoundingClientRect().right);
 
-  arrowRight.addEventListener('click', () => {
-    let currentValue = contentCard.offsetLeft;
-
-    if(currentValue > -860){
-      contentCard.style.left = `${currentValue - 250}px`;
-      arrowLeft.style.background = "url('icon/arr.png') center/cover";
-
-      setTimeout(() => {
-        currentValue = contentCard.offsetLeft;
-        if(currentValue < -860){
-          arrowRight.style.background = "url('icon/arrDisabled.png') center/cover";
-        }
-      }, 500);
-    }
-  });
+  // console.log("DEFAULT: " + defaultPos); // Test
 
   arrowLeft.addEventListener('click', () => {
-    let currentValue = contentCard.offsetLeft;
+    if(currentPos > 550){
+      arrowRight.style.background = "center/cover url('icon/arr.png')";
+      contentCard.style.transform += 'translateX(-250px)';
+      currentPos -= 250;
+      // console.log("Left: " + currentPos); // Test
 
-    if(currentValue < 860){
-      contentCard.style.left = `${currentValue + 250}px`;
-      arrowRight.style.background = "url('icon/arr.png') center/cover";
-
-      setTimeout(() => {
-        currentValue = contentCard.offsetLeft;
-
-        if(currentValue > 860){
-          arrowLeft.style.background = "url('icon/arrDisabled.png') center/cover";
-        }
-      }, 500);
-
+      if(currentPos <= 550){
+        arrowLeft.style.background = "center/cover url('icon/arrDisabled.png')";
+      }
     }
+    
+  });
+
+  arrowRight.addEventListener('click', () => {
+    if(currentPos < defaultPos){
+      arrowLeft.style.background = "center/cover url('icon/arr.png')";
+      contentCard.style.transform += 'translateX(250px)';
+      currentPos += 250;
+      // console.log("Right: " + currentPos); // Test
+
+      if(currentPos === defaultPos){
+        arrowRight.style.background = "center/cover url('icon/arrDisabled.png')";
+      }
+    }
+
   });
 
 })();
@@ -183,7 +181,7 @@ const contentLang = document.getElementById('contentLang');
 const menuLang = document.getElementsByClassName('menuLang')[0];
 
 
-// Lock arrow when mouse hover/out in menu
+// Lock arrow when mouse hover/out in menu lang
 menuLang.addEventListener('mouseenter', () => {
   document.styleSheets[0].cssRules[30].style.transform = 'rotate(0)'; // lang::after
 });
