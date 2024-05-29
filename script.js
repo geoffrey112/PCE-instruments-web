@@ -183,7 +183,7 @@ const menuLang = document.getElementsByClassName('menuLang')[0];
 
 // Lock arrow when mouse hover/out in menu lang
 menuLang.addEventListener('mouseenter', () => {
-  document.styleSheets[0].cssRules[30].style.transform = 'rotate(0)'; // lang::after
+  document.styleSheets[0].cssRules[30].style.transform = 'rotate(0)'; // lang::after  
 });
 
 menuLang.addEventListener('mouseleave', () => {
@@ -245,7 +245,6 @@ searchBar.addEventListener('input', () => {
 // Responsive (for menuBurger)
 window.addEventListener('resize', () => {
   if(isMenuOpened === true && window.innerWidth > 767.98){
-    console.log('> 767.98px');
     openCloseMenuBurger();
   }
 });

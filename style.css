@@ -29,6 +29,12 @@ a{
 }
 
 /**** Re-use class ****/
+.mainMarge{
+  margin:90px 10% 0;
+  transition-duration: 0.5s;
+  transition-property: margin-left;
+}
+
 .flex{
   display: flex;
 }
@@ -51,10 +57,6 @@ a{
   width:380px;
   height:370px;
   position:absolute;
-}
-
-.justEnd{
-  justify-content: end;
 }
 
 .justCenter{
@@ -103,6 +105,7 @@ header{
 .headTop{
   height:100px;
   display: flex;
+  overflow: hidden;
 }
 
 .headLeft{
@@ -367,11 +370,6 @@ h1{
 }
 
 /*** Messtechnik ***/
-.mainMarge{
-  margin:90px 10% 0;
-  transition-duration: 0.5s;
-  transition-property: margin-left;
-}
 
 .titleTop{
   width:560px;
@@ -552,7 +550,7 @@ h1{
 }
 
 .contTxtArrow > div > div{
-  width:400px;
+  width:395px;
   justify-content: space-between;
 }
 
@@ -562,12 +560,12 @@ h1{
 }
 
 .contentArrow{
-  margin:auto 0 auto 0px;
+  margin:auto 0 auto 0;
 }
 
 #arrLeft{
   margin-right:18px;
-  cursor: pointer;
+  cursor: pointer; 
   background: url('icon/arr.png') center/cover;
   transform: rotate(180deg);
   width:26px;
@@ -639,6 +637,7 @@ h1{
 .containerUmweltdaten{
   background-color:#006eff1e;
   margin:60px 4%;
+  height: fit-content;
 }
 
 .titleUmweltdaten{
@@ -648,30 +647,42 @@ h1{
   letter-spacing: 1px;
 }
 
+.mainContTxtUmwelt{
+  width:75%;
+  margin-left:auto;
+  transition-duration: 0.5s;
+  padding: 0 5%;
+}
+
 .contentUmweltLeft{
-  width:35%;
+  width:50%;
+  transition-duration: 0.5s;
 }
 
 .contentUmweltRight{
-  width:35%;
+  width:50%;
   margin-left:4%;
-  margin-right:5%;
+  transition-duration: 0.5s;
 }
 
 .containerLogo{
   height:100px;
   width:65%;
-  margin-left:21%;
+  margin-left:23%;
   padding-bottom:30px;
   position:relative;
   justify-content: space-around;
+  transition-duration: 0.5s;
 }
 
 .logoArrow{
   background: center/contain url("icon/arrowBottRight.png");
-  width:30px;
+  width:30px; 
   height:30px;
-  transform: rotate(-90deg);
+  rotate:-90deg;
+  transition-duration: 0.5s;
+  transition-property: translate, rotate, scale;
+  transition-delay: 0s, 0s, 0.5s;
 }
 
 .contentLogo{
@@ -725,6 +736,25 @@ h1{
   align-self: center;
 }
 
+.containerCardDienst{
+  transition-duration: 0.5s;
+}
+
+.contentCardDienst{
+  height:550px;
+  align-items: center;
+  margin-left:3%;
+}
+
+.decoSquareBig{
+  background: url('image/square_dot.jpg') center/contain;
+  position: absolute;
+  height:680px;
+  width:500px;
+  right:-60px;
+  transition-duration: 0.5s;
+}
+
 .card1Dienst{
   background: url('image/messtechnik.jpg') center/cover;
   width:380px;
@@ -754,20 +784,6 @@ h1{
   height:500px;
   box-shadow: 6px 6px 8px 0 #000000a1;
   cursor: pointer;
-}
-
-.containerCardDienst{
-  height:550px;
-  align-items: center;
-  margin-left:3%;
-}
-
-.decoSquareBig{
-  background: url('image/square_dot.jpg') center/contain;
-  position: absolute;
-  height:680px;
-  width:500px;
-  right:-60px;
 }
 
 .gradientDienst{
@@ -887,7 +903,7 @@ h1{
   margin:0;
 }
 
-.lastTitle + p{
+.paraEmpfo{
   color:#115ba0;
   width:500px;
 }
@@ -907,6 +923,7 @@ h1{
   display: flex;
   justify-content: end;
   align-items: flex-end;
+  transition-duration: 0.5s;
 }
 
 .video1{
@@ -1184,13 +1201,48 @@ footer{
 
 /* XL */
 @media (max-width: 1199.98px) {
+ 
+  /* Dienstleistungen */
+
+  .card1Dienst{
+    width:280px;
+    height:280px;
+  }
+
+  .card1Dienst:hover{
+    width:300px;
+    height:300px;
+  }
+
+  .card2Dienst{
+    width: 280px;
+    height: 380px;
+  }
   
+  .card2Dienst:hover{
+    width:300px;
+    height:400px;
+  }
+
+  /* Empfohlene */
+
+  .contentVideo{
+    width:290px;
+    height:180px;
+  }
+
 }
 
 /* LG */
 @media (max-width: 991.98px) {
   .headRight{
     padding:0 8px;
+  }
+
+  /* Messtechnik */
+
+  .posDecoSquare1{
+    right:-60px;
   }
 
   /* Messtechnik2 */
@@ -1243,6 +1295,65 @@ footer{
     width:80%;
   }
 
+  /* Umweltdaten */
+
+  .mainContTxtUmwelt{
+    width:90%;
+  }
+
+  .containerLogo{
+    width:80%;
+    margin-left:10%;
+  }
+
+  /* Dienstleistungen */
+
+  .containerCardDienst{
+    width:320px;
+    margin:auto;
+  }
+
+  .containerDienst{
+    height: fit-content;
+  }
+
+  .contentTxtDienst{
+    width:50%;
+  }
+
+  .contentCardDienst{
+    flex-direction: column;
+    height:fit-content;
+  }
+
+  .decoSquareBig{
+    right:-50px;
+  }
+
+  .card2Dienst{
+    margin-left:0;
+    margin-top:15px;
+  }
+
+  /* Empfohlene */
+
+  .containerEmpfohlene{
+    flex-wrap: wrap;
+  }
+
+  .contentVideo{
+    margin:30px;
+  }
+
+  /* Footer */
+  .footerBottom{
+    flex-direction: column;
+  }
+
+  .footerBottom > div{
+    width:100%;
+  }
+
 }
 
 /* MD */
@@ -1287,7 +1398,7 @@ footer{
   }
 
   .posDecoSquare1{
-    right:-50px;
+    right:-20px;
   }
 
   /* Messtechnik2 */
@@ -1297,34 +1408,93 @@ footer{
   }
 
   .contentImg{
-    width:540px;
+    width:530px;
     height:720px;
   }
 
   .card1Mess, .card4Mess{
-    width:250px;
-    height:350px;
+    width:240px;
+    height:340px;
   }
 
   .card2Mess, .card3Mess{
-    width:250px;
-    height:250px;
+    width:240px;
+    height:240px;
   }
 
   .card1Mess:hover, .card4Mess:hover{
-    width:270px;
-    height:370px;
+    width:260px;
+    height:360px;
   }
 
   .card2Mess:hover, .card3Mess:hover{
-    width:270px;
-    height:270px;
+    width:260px;
+    height:260px;
+  }
+
+  /* Umweltdaten */
+
+  .mainContTxtUmwelt > div{
+    flex-direction: column;
+  }
+  
+  .contentUmweltLeft{
+    width:100%;
+  }
+  
+  .contentUmweltRight{
+    width:100%;
+    margin:0;
+  }
+
+  .containerLogo{
+    margin:0;
+    width:100%
+  }
+
+  /* Dienstleistungen */
+
+  .titleDienst{
+    font-size: 36px;
+    width:530px;
+  }
+
+  .decoSquareBig{
+    right:-20px;
+  }
+
+  /* Positionierung */
+
+  .titlePosition{
+    font-size: 38px;
+    width: fit-content;
+  }
+
+  /* Empfohlene */
+
+  .contentVideo{
+    width:360px;
+    height:250px;
+    margin:35px 0;
   }
 
 }
 
 /* SM */
-@media (max-width: 575.98px) {
+@media (max-width: 575.98px){
+
+  #contentLang, #cart, #iconBurger{
+    margin:0 8px;
+  }
+
+  .headMiddle{
+    width:300px;
+  }
+
+  h1{
+    font-size:45px;
+  }
+
   h2{
     font-size: 38px;
   }
@@ -1345,8 +1515,12 @@ footer{
 
   /* Messtechnik2 */
 
+  .contentMessLeft2{
+    width:fit-content;
+  }
+
   .contentImg{
-    width:480px;
+    width:300px;
     height:1550px;
   }
 
@@ -1367,6 +1541,14 @@ footer{
 
   /* Branche */
 
+  .contentTitle{
+    width: fit-content;
+  }
+
+  .posDecoSquare2{
+    left:-120px;
+  }
+
   .containerBranche > div{
     flex-direction: column;
   }
@@ -1380,14 +1562,131 @@ footer{
     margin:0;
   }
 
+  /* Umweltdaten */
+
+  .titleUmweltdaten{
+    width: fit-content;
+  }
+
+  .containerLogo{
+    height: fit-content;
+    flex-wrap: wrap;
+    margin-top:30px;
+  }
+
+  .logoArrow{
+    position: absolute;
+    left:0;
+    translate:160px -45px;
+    rotate: 0 1 0 180deg;
+    scale:1.3;
+  }
+
+  .contentLogo{
+    margin:0 5px;
+  }
+
+  /* Dienstleistungen */
+
+  .titleDienst{
+    width: fit-content;
+  }
+
+  .containerDienst{
+    flex-direction: column;
+  }
+
+  .contentTxtDienst{
+    width:100%;
+  }
+
+  .decoSquareBig{
+    right:auto;
+    width:90vw;
+    transition-duration: 0s;
+  }
+
+  /* Positionierung */
+
+  .positionierung{
+    width:100%;
+  }
+
+  .titlePosition{
+    right:0px;
+    margin-left:20px;
+  }
+
+  .contentPosTxt{
+    width:90%;
+    margin-left:20px;
+  }
+
+  .containerPosInfo{
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+
+  .containerPosInfo > div{
+    width:40%;
+    margin-top:5px;
+  }
+
+  .containerPosInfo > div:first-child{
+    margin-left:0%;
+    margin-bottom:40px;
+  }
+  
+  .containerPosInfo > div:last-child{
+    margin-right:0%;
+  }
+
+  /* Empfohlene */
+
+  .paraEmpfo{
+    width:100%;
+  }
+
+  .contentVideo{
+    width:330px;
+    height:220px;
+  }
+
+  /* Footer */
+
+  .contentCategoFooter{
+    flex-wrap: wrap;
+  }
+
+  .categoFooter{
+    width:50%;
+  }
+
+  .footerBottom > div{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .footerBottom > div > span{
+    margin:0 5px;
+  }
+
 }
 
 /* XS */
 @media (max-width: 430px){
+
+  .headMiddle{
+    width: fit-content;
+  }
+
   .contTxtArrow > div > div{
-    background-color: lightblue;
     flex-wrap: wrap;
     justify-content: center;
     width:100%;
+  }
+
+  .contentCategoFooter{
+    flex-direction: column;
   }
 }
