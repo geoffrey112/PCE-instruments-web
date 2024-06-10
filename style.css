@@ -132,7 +132,7 @@ header{
   padding:0 20px;
 }
 
-.contentTab > a, #lang{
+.contentTab > a, #mainLang{
   height: fit-content;
   font-weight: bold;
 }
@@ -154,11 +154,11 @@ header{
   margin:16px 10px;
 }
 
-.headRight a:hover, #lang:hover{
+.headRight a:hover, #mainLang:hover{
   color:#61b3ff;
 }
 
-#lang{
+#mainLang{
   width: fit-content;
   height:18px;
   color:#ffffff;
@@ -167,7 +167,7 @@ header{
   align-items: center;
 }
 
-#lang::after{
+#mainLang::after{
   content:"";
   background: no-repeat center/18px 18px url('icon/arrowDown.png');
   transform: rotate(-90deg);
@@ -177,7 +177,7 @@ header{
   border-radius: 50%;
 }
 
-#lang::before{
+#mainLang::before{
   content:"";
   background: no-repeat center/21px 21px url('icon/globe.png');
   align-self: center;
@@ -186,7 +186,7 @@ header{
   transform: rotateZ('50deg');
 }
 
-#lang:hover::after{
+#mainLang:hover::after{
   transform:rotate(0);
 }
 
@@ -207,13 +207,13 @@ header{
   margin:12px 5px;
 }
 
-.checked{
+.boxCheck{
   width:20px;
   height:20px;
   margin-right:4px;
 }
 
-.currentLang{
+.checked{
   background: center/cover url('icon/coche.png') no-repeat;
 }
 

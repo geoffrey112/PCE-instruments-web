@@ -76,14 +76,11 @@ function redirectSearchBar(){
   const defaultPos = Math.round(contentCard.getBoundingClientRect().right);
   let currentPos = Math.round(contentCard.getBoundingClientRect().right);
 
-  // console.log("DEFAULT: " + defaultPos); // Test
-
   arrowLeft.addEventListener('click', () => {
     if(currentPos > 550){
       arrowRight.style.background = "center/cover url('icon/arr.png')";
       contentCard.style.transform += 'translateX(-250px)';
       currentPos -= 250;
-      // console.log("Left: " + currentPos); // Test
 
       if(currentPos <= 550){
         arrowLeft.style.background = "center/cover url('icon/arrDisabled.png')";
@@ -97,7 +94,6 @@ function redirectSearchBar(){
       arrowLeft.style.background = "center/cover url('icon/arr.png')";
       contentCard.style.transform += 'translateX(250px)';
       currentPos += 250;
-      // console.log("Right: " + currentPos); // Test
 
       if(currentPos === defaultPos){
         arrowRight.style.background = "center/cover url('icon/arrDisabled.png')";
@@ -159,6 +155,32 @@ function redirectSearchBar(){
 })();
 
 
+function translate(event){
+  const boxChecks = document.getElementsByClassName('boxCheck');
+  const boxCheck = Array.from(boxChecks);
+  const langs = document.getElementsByClassName('lang');
+  const lang = Array.from(langs);
+  const mainLang = document.getElementById('mainLang');
+
+  // Check selected language
+  if(!event.target.previousElementSibling.classList.contains('checked')){
+    boxCheck.forEach(elem => {
+      elem.classList.remove('checked');
+    });
+  
+    event.target.previousElementSibling.classList.add('checked');
+  }
+
+  // Displays the selected language
+  mainLang.textContent = event.target.textContent;
+
+
+  // Make internationalization
+  
+
+
+}
+
 ///////////////\\\\\\\\\\\\\\\
 
 const background = document.getElementById('backgroundMenu');
@@ -167,32 +189,26 @@ const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)
 const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
 const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
 
-const buttonSearch = document.getElementById('buttonSearch');
-const searchBar = document.getElementsByName('search')[0];
-
 const iconBurger = document.getElementById('iconBurger');
 let isMenuOpened = false;
 
 const contentTabs = document.getElementsByClassName('contentTab');
 const contentTab = Array.from(contentTabs);
-const mainTabs = document.getElementsByClassName('mainTab');
-const mainTab = Array.from(mainTabs);
 const contentLang = document.getElementById('contentLang');
 const menuLang = document.getElementsByClassName('menuLang')[0];
 
+const buttonSearch = document.getElementById('buttonSearch');
+const searchBar = document.getElementsByName('search')[0];
 
-// Lock arrow when mouse hover/out in menu lang
-menuLang.addEventListener('mouseenter', () => {
-  document.styleSheets[0].cssRules[30].style.transform = 'rotate(0)'; // lang::after  
-});
-
-menuLang.addEventListener('mouseleave', () => {
-  document.styleSheets[0].cssRules[30].style.transform = 'rotate(-90deg)';
-});
+const elemDate = document.getElementById('date');
+const currentYear = new Date().getFullYear();
 
 
 // Open/close menu tab
 contentTab.forEach((elem, idx) => {
+  const mainTabs = document.getElementsByClassName('mainTab');
+  const mainTab = Array.from(mainTabs);
+
   elem.addEventListener('mouseenter', () => {
     mainTab[idx].style.transitionTimingFunction = 'ease-in-out';
     mainTab[idx].style.transitionDuration = '0.4s';
@@ -209,10 +225,28 @@ contentTab.forEach((elem, idx) => {
 
 // Open/close menu lang
 contentLang.addEventListener('mouseenter', () => {
-  menuLang.style.height = '120px';
+  menuLang.style.height = '125px';
 });
 contentLang.addEventListener('mouseleave', () => {
   menuLang.style.height = '0px';
+});
+
+
+// Lock arrow when mouse hover/out in menu lang
+menuLang.addEventListener('mouseenter', () => {
+  document.styleSheets[0].cssRules[30].style.transform = 'rotate(0)'; // lang::after  
+});
+
+menuLang.addEventListener('mouseleave', () => {
+  document.styleSheets[0].cssRules[30].style.transform = 'rotate(-90deg)';
+});
+
+
+// Responsive (for menuBurger)
+window.addEventListener('resize', () => {
+  if(isMenuOpened === true && window.innerWidth > 767.98){
+    openCloseMenuBurger();
+  }
 });
 
 
@@ -225,14 +259,12 @@ iconBurger.addEventListener('click', openCloseMenuBurger);
 // Do search (button)
 buttonSearch.addEventListener('click', redirectSearchBar);
 
-
 // Do search (input)
 searchBar.addEventListener('keydown', (e) => {
   if(e.key === 'Enter'){
     redirectSearchBar();
   }
 });
-
 
 // Disabled msg error if input not empty
 searchBar.addEventListener('input', () => {
@@ -242,12 +274,12 @@ searchBar.addEventListener('input', () => {
 });
 
 
-// Responsive (for menuBurger)
-window.addEventListener('resize', () => {
-  if(isMenuOpened === true && window.innerWidth > 767.98){
-    openCloseMenuBurger();
-  }
+// Add current date footer (year)
+elemDate.textContent = currentYear;
+
+
+// Internationalization
+document.querySelectorAll('.menuLang p').forEach(p => {
+  p.addEventListener('click', translate);
 });
-
-
 

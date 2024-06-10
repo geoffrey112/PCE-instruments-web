@@ -1,0 +1,158 @@
+{
+  "header": {
+    "main": {
+      "tab1": "",
+      "tab2": "",
+      "tab3": "",
+      "tab4": "",
+      "tab5": "",
+      "tabLang": ""
+    },
+
+    "tabs": {
+      "p1Tab1": "",
+      "p2Tab1": "",
+      "p3Tab1": "",
+      "p4Tab1": "",
+
+      "p1Tab2": "",
+      "p2Tab2": "",
+      "p3Tab2": "",
+      "p4Tab2": "",
+      "p5Tab2": "",
+
+      "p1Tab3": "",
+      "p2Tab3": "",
+
+      "p1Tab4": "",
+      "p2Tab4": "",
+      "p3Tab4": "",
+
+      "p1Tab5": "",
+      "p2Tab5": "",
+      "p3Tab5": "",
+      "p4Tab5": ""
+    }
+  },
+
+  "body": {
+    "messtechnik":{
+      "h2": "",
+      "p1": "",
+      "p2": "",
+      "p3": "",
+      "spanBefore": "",
+      "link":"",
+      "spanAfter":""
+    },
+
+    "immer": {
+      "p1": "",
+      "h2": "",
+      "h3Card1": "",
+      "pCard1": "",
+      "h3Card2": "",
+      "pCard2": "",
+      "h3Card3": "",
+      "pCard3": "",
+      "h3Card4": "",
+      "pCard4": ""
+    },
+
+    "fur_jede": {
+      "h2": "",
+      "p1": "",
+      "p2": "",
+      "p3": "",
+      "p4": "",
+      "h3Card1": "",
+      "pCard1": "",
+      "h3Card2": "",
+      "pCard2": "",
+      "h3Card3": "",
+      "pCard3": "",
+      "h3Card4": "",
+      "pCard4": "",
+      "h3Card5": "",
+      "pCard5": "",
+      "h3Card6": "",
+      "pCard6": ""
+    },
+
+    "umweltdaten": {
+      "h2": "",
+      "p1": "",
+      "p2": "",
+      "p3": "",
+      "pLogo1": "",
+      "pLogo2": "",
+      "pLogo3": "",
+      "pLogo4": "",
+      "pLogo5": "",
+      "pLogo6": ""
+    },
+
+    "service": {
+      "h2": "",
+      "p1": "",
+      "p2": "",
+      "h3Card1": "",
+      "pCard1":"", 
+      "h3Card2": "",
+      "pCard2":""
+    },
+
+    "positionierung": {
+      "h2": "",
+      "p1": "",
+      "p2": "",
+      "link": "",
+      "pLogo1": "",
+      "pLogo2": "",
+      "pLogo3": "",
+      "pLogo4": ""
+    },
+
+    "empfohlene": {
+      "h2": "",
+      "p1": "",
+      "pCard1": "",
+      "link1": "",
+      "pCard2": "",
+      "link2": "",
+      "pCard3": "",
+      "link3": ""
+    },
+
+    "footer": {
+      "p1":"",
+      "h4-1": "",
+      "link1-1": "",
+      "link2-1": "",
+      "link3-1": "",
+      "link4-1": "",
+      "h4-2": "",
+      "link1-2": "",
+      "link2-2": "",
+      "link3-2": "",
+      "link4-2": "",
+      "h4-3": "",
+      "link1-3": "",
+      "link2-3": "",
+      "link3-3": "",
+      "link4-3": "",
+      "link5-3": "",
+      "link6-3": "",
+      "h4-4": "",
+      "span1": "",
+      "span2": "",
+      "span3": "",
+      "span4": "",
+      "span5": "",
+      "span6": "",
+      "span7": "",
+      "p2":""
+    }
+
+  }
+}
