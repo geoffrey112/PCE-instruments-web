@@ -5,8 +5,7 @@
       "tab2": "Utilisation",
       "tab3": "Services",
       "tab4": "Support",
-      "tab5": "Société",
-      "tabLang": "Français"
+      "tab5": "Société"
     },
 
     "tabs": {
@@ -45,7 +44,7 @@
       "p2": "PCE Instruments met l'accent principal sur les instruments de mesure. Dans notre catalogue, vous trouverez des appareils portables, des instruments pour l'installation fixe et d'autres instruments de mesure pour l'analyse et la recherche.",
       "p3": "Il devient de plus en plus important de collecter des données, que ce soit dans l'industrie ou dans les domaines professionnel et privé. La demande se concentre surtout sur les appareils qui mesurent rapidement et précisément et fournissent des résultats concrets pendant la mesure. Chez PCE Instruments, vous trouverez plus de 600 instruments de mesure, de régulation et de pesage.",
       "spanBefore": "",
-      "link":"Contactez-nous !",
+      "link":"Contactez-nous ! ",
       "spanAfter":"Nous serons heureux de vous aider à trouver l'instrument de mesure adapté à vos besoins."
     },
 
@@ -53,13 +52,10 @@
       "p1": "Depuis plus de 40 ans",
       "h2": "Toujours à la pointe de la technologie de mesure.",
       "h3Card1": "Instruments de mesure",
-      "pCard1": "Découvrir",
+      "pCard": "Découvrir",
       "h3Card2": "Régulation et contrôle",
-      "pCard2": "Découvrir",
       "h3Card3": "Laboratoire",
-      "pCard3": "Découvrir",
-      "h3Card4": "Balances et bascules",
-      "pCard4": "Découvrir"
+      "h3Card4": "Balances et bascules"
     },
 
     "branche": {
@@ -69,17 +65,12 @@
       "p3": "Les dispositifs de commande HMI (Interface Homme-Machine) constituent un grand soutien pour la visualisation des processus. Ils sont spécialement conçus pour le contrôle et l'observation des opérations dans l'industrie. Peu importe le type de communication souhaité de votre part (bus de terrain, Ethernet, interfaces série), nos dispositifs de commande peuvent être facilement intégrés à tous les réseaux.",
       "p4": "Nos solutions pour votre entreprise. Solutions industrielles.",
       "h3Card1": "Visualisation des processus",
-      "pCard1": "Découvrir",
+      "pCard": "Découvrir",
       "h3Card2": "Technologie de pesage industrielle",
-      "pCard2": "Découvrir",
       "h3Card3": "Mesure d'humidité",
-      "pCard3": "Découvrir",
       "h3Card4": "Autre card",
-      "pCard4": "Découvrir",
       "h3Card5": "Autre card",
-      "pCard5": "Découvrir",
-      "h3Card6": "Autre card",
-      "pCard6": "Découvrir"
+      "h3Card6": "Autre card"
     },
 
     "umweltdaten": {
@@ -95,17 +86,16 @@
       "pLogo6": "Forêt climatique"
     },
 
-    "service": {
+    "dienst": {
       "h2": "Services et prestations pour les mesures industrielles",
       "p1": "PCE Instruments développe des solutions personnalisées avec des ingénieurs et des techniciens spécialisés. La collaboration étroite avec les clients permet d'obtenir des solutions adaptées et de garantir que les instruments de mesure non seulement répondent aux attentes, mais les dépassent même. Nos services comprennent la maintenance, le calibrage ainsi que, si nécessaire, la réparation de nos appareils.",
       "p2": "PCE Instruments propose des solutions complètes : acquisition et transmission de données ainsi que visualisation et régulation des processus sur machines et installations. Il n'est plus nécessaire qu'une personne soit physiquement présente devant la machine ou l'installation pour effectuer ces tâches. Notre service de maintenance à distance permet d'accéder à un système distant et de consulter ou de modifier des paramètres à distance.",
       "h3Card1": "Développement & Production",
-      "pCard1":"Découvrir", 
-      "h3Card2": "Installation & Maintenance",
-      "pCard2":"Découvrir"
+      "pCard":"Découvrir", 
+      "h3Card2": "Installation & Maintenance"
     },
 
-    "positionierung": {
+    "position": {
       "h2": "La position de notre entreprise en chiffres et en faits.",
       "p1": "PCE Instruments collabore avec des universités et des instituts de recherche. PCE Instruments s'est spécialisé dans le domaine de la maintenance conditionnelle en fournissant des équipements de haute qualité, bien que notre programme soit beaucoup plus vaste pour répondre aux besoins des clients. Le développement de nouveaux produits PCE met l'accent d'une part sur la facilité d'utilisation et d'autre part sur les avantages considérables pour le client.",
       "p2": "Chez PCE, les données et les chiffres sont essentiels, car surtout en technologie, il est crucial de connaître les données et les statistiques de tous les paramètres que l'on souhaite contrôler. Voici quelques chiffres sur PCE Instruments, qui illustrent comment notre entreprise a évolué depuis les années 90 et s'est développée à l'échelle mondiale. Pour plus d'informations, veuillez nous contacter ",
@@ -120,45 +110,43 @@
       "h2": "Produits recommandés",
       "p1": "Développement, fabrication et vente de techniques de mesure, de régulation, de pesage et de laboratoire dans l'industrie.",
       "pCard1": "Sonomètre PCE-322A",
-      "link1": "Voir la vidéo",
+      "linkVid": "Voir la vidéo",
       "pCard2": "Endoscope industriel PCE-VE 1000",
-      "link2": "Voir la vidéo",
-      "pCard3": "Débitmètre PCE-TDS 100",
-      "link3": "Voir la vidéo"
-    },
+      "pCard3": "Débitmètre PCE-TDS 100"
+    }
 
-    "footer": {
-      "p1":"Tous les prix s'entendent hors TVA, ",
-      "span": "frais de port en sus.",
-      "h4-1": "Entreprise",
-      "link1-1": "À propos de nous",
-      "link2-1": "Histoire",
-      "link3-1": "Carrière",
-      "link4-1": "Bureaux",
-      "h4-2": "Catégories de produits",
-      "link1-2": "Instruments de mesure",
-      "link2-2": "Régulation et contrôle",
-      "link3-2": "Balances et bascules",
-      "link4-2": "Laboratoire",
-      "h4-3": "Domaines thématiques",
-      "link1-3": "Surveillance de l'état",
-      "link2-3": "Visualisation des processus",
-      "link3-3": "Pesage industriel",
-      "link4-3": "Mesure de l'humidité",
-      "link5-3": "Contrôle non destructif",
-      "link6-3": "Détection de gaz",
-      "h4-4": "Médias sociaux",
-      "span1": "Mentions légales",
-      "span2": "Expédition",
-      "span3": "Modes de paiement",
-      "span4": "Protection des données",
-      "span5": "CGV",
-      "span6": "Droit de rétractation",
-      "span7": "Renvoi matériel",
-      "p2":""
-    },
+  },
 
-    "noscript": "Veuillez activer Javascript pour que le site fonctionne correctement."
+  "footer": {
+    "p1":"Tous les prix s'entendent hors TVA, ",
+    "span": "frais de port en sus.",
+    "h4-1": "Entreprise",
+    "link1-1": "À propos de nous",
+    "link2-1": "Histoire",
+    "link3-1": "Carrière",
+    "link4-1": "Bureaux",
+    "h4-2": "Catégories de produits",
+    "link1-2": "Instruments de mesure",
+    "link2-2": "Régulation et contrôle",
+    "link3-2": "Balances et bascules",
+    "link4-2": "Laboratoire",
+    "h4-3": "Domaines thématiques",
+    "link1-3": "Surveillance de l'état",
+    "link2-3": "Visualisation des processus",
+    "link3-3": "Pesage industriel",
+    "link4-3": "Mesure de l'humidité",
+    "link5-3": "Contrôle non destructif",
+    "link6-3": "Détection de gaz",
+    "h4-4": "Médias sociaux",
+    "span1": "Mentions légales",
+    "span2": "Expédition",
+    "span3": "Modes de paiement",
+    "span4": "Protection des données",
+    "span5": "CGV",
+    "span6": "Droit de rétractation",
+    "span7": "Renvoi matériel",
+    "p2": "Tous droits réservés"
+  },
 
-  }
+  "noscript": "Veuillez activer Javascript pour que le site fonctionne correctement."
 }

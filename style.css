@@ -135,6 +135,7 @@ header{
 .contentTab > a, #mainLang{
   height: fit-content;
   font-weight: bold;
+  cursor: default;
 }
 
 .mainTab{
@@ -967,14 +968,17 @@ footer{
   padding-bottom:25px;
 }
 
-.paraFooterTop{
-  color:#6497c9;
+footer > .mainMarge{
   padding-top:20px;
+}
+
+footer > div > span{
+  color:#6497c9;
   margin-bottom: 0;
   font-size: 14px;
 }
 
-.paraFooterTop > span{
+footer > div > span:nth-child(2){
   text-decoration: underline 2px;
 }
 
@@ -1029,6 +1033,15 @@ footer{
   justify-content: space-between;
   width:60%;
   color:#6497c9;
+  text-align: center;
+}
+
+.footerBottom > div > span{
+  cursor: pointer;
+}
+
+.footerBottom > div > span:hover{
+  color: #c3d7e4;
 }
 
 .footerBottom > p{

@@ -149,37 +149,111 @@ function redirectSearchBar(){
     elem.addEventListener('mouseleave', () => {
       link[idx].removeAttribute('href');
     });
-
   });
 
 })();
 
 
-function translate(event){
+function displaySelectedLang(event){
+  const boxIsChecked = event.target.previousElementSibling.classList.contains('checked');
   const boxChecks = document.getElementsByClassName('boxCheck');
   const boxCheck = Array.from(boxChecks);
-  const langs = document.getElementsByClassName('lang');
-  const lang = Array.from(langs);
   const mainLang = document.getElementById('mainLang');
 
   // Check selected language
-  if(!event.target.previousElementSibling.classList.contains('checked')){
+  if(!boxIsChecked){
     boxCheck.forEach(elem => {
       elem.classList.remove('checked');
     });
   
     event.target.previousElementSibling.classList.add('checked');
+
+    // Displays the selected language
+    mainLang.textContent = event.target.textContent;
   }
 
-  // Displays the selected language
-  mainLang.textContent = event.target.textContent;
-
-
-  // Make internationalization
-  
-
-
 }
+
+
+async function translate(event){
+  const boxIsChecked = event.target.previousElementSibling.classList.contains('checked');
+  const lang = document.querySelector('[lang]');
+  let response;
+  let jsonFile;
+  const elemHeader = document.querySelectorAll('[data-trans-main]');
+  const elemTab = document.querySelectorAll('[data-trans-tab]');
+  const elemBanner = document.querySelector('[data-trans-ban]');
+  const elemMess = document.querySelectorAll('[data-trans-mess]');
+  const elemMess2 = document.querySelectorAll('[data-trans-mess2]');
+  const elemBranche = document.querySelectorAll('[data-trans-branche]');
+  const elemUmwelt = document.querySelectorAll('[data-trans-umwelt]');
+  const elemDienst = document.querySelectorAll('[data-trans-dienst]');
+  const elemPos = document.querySelectorAll('[data-trans-position]');
+  const elemEmpfo = document.querySelectorAll('[data-trans-empfo]');
+  const elemFoo = document.querySelectorAll('[data-trans-foo]');
+
+  if(!boxIsChecked){
+
+    if(event.target.id === 'de'){
+      location.reload();
+    }else if(event.target.id === 'fr'){
+      response = await fetch("lang/fr.json");
+      jsonFile = await response.json();
+      lang.setAttribute('lang', 'fr');
+    }else if(event.target.id === 'en'){
+      response = await fetch("lang/en.json");
+      jsonFile = await response.json();
+      lang.setAttribute('lang', 'en');
+    }
+
+    if(event.target.id === 'fr' || event.target.id === 'en'){
+      elemHeader.forEach(elem => {
+        elem.textContent = jsonFile.header.main[elem.getAttribute('data-trans-main')];
+      });
+  
+      elemTab.forEach(elem => {
+        elem.textContent = jsonFile.header.tabs[elem.getAttribute('data-trans-tab')];
+      });
+  
+      elemBanner.textContent = jsonFile.header.banner['h1'];
+    
+      elemMess.forEach(elem => {
+        elem.textContent = jsonFile.body.messtechnik[elem.getAttribute('data-trans-mess')];
+      });
+
+      elemMess2.forEach(elem =>{
+        elem.textContent = jsonFile.body.messtechnik2[elem.getAttribute('data-trans-mess2')];
+      });
+
+      elemBranche.forEach(elem => {
+        elem.textContent = jsonFile.body.branche[elem.getAttribute('data-trans-branche')];
+      });
+
+      elemUmwelt.forEach(elem => {
+        elem.textContent = jsonFile.body.umweltdaten[elem.getAttribute('data-trans-umwelt')];
+      });
+
+      elemDienst.forEach(elem => {
+        elem.textContent = jsonFile.body.dienst[elem.getAttribute('data-trans-dienst')];
+      });
+
+      elemPos.forEach(elem => {
+        elem.textContent = jsonFile.body.position[elem.getAttribute('data-trans-position')];
+      });
+
+      elemEmpfo.forEach(elem => {
+        elem.textContent = jsonFile.body.empfohlene[elem.getAttribute('data-trans-empfo')];
+      });
+
+      elemFoo.forEach(elem => {
+        elem.textContent = jsonFile.footer[elem.getAttribute('data-trans-foo')];
+      }); 
+    
+    }
+  }
+  
+}
+
 
 ///////////////\\\\\\\\\\\\\\\
 
@@ -281,5 +355,6 @@ elemDate.textContent = currentYear;
 // Internationalization
 document.querySelectorAll('.menuLang p').forEach(p => {
   p.addEventListener('click', translate);
+  p.addEventListener('click', displaySelectedLang);
 });
 
