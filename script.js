@@ -191,6 +191,7 @@ async function translate(event){
   const elemPos = document.querySelectorAll('[data-trans-position]');
   const elemEmpfo = document.querySelectorAll('[data-trans-empfo]');
   const elemFoo = document.querySelectorAll('[data-trans-foo]');
+  const headMiddle = document.querySelector('.headMiddle');
 
   if(!boxIsChecked){
 
@@ -200,10 +201,14 @@ async function translate(event){
       response = await fetch("lang/fr.json");
       jsonFile = await response.json();
       lang.setAttribute('lang', 'fr');
+
+      headMiddle.style.margin = '150px 10%';
     }else if(event.target.id === 'en'){
       response = await fetch("lang/en.json");
       jsonFile = await response.json();
       lang.setAttribute('lang', 'en');
+
+      headMiddle.style.margin = '80px 10% 150px 10%';
     }
 
     if(event.target.id === 'fr' || event.target.id === 'en'){

@@ -1,152 +1,152 @@
 {
   "header": {
     "main": {
-      "tab1": "",
-      "tab2": "",
-      "tab3": "",
-      "tab4": "",
-      "tab5": ""
+      "tab1": "Products",
+      "tab2": "Solutions",
+      "tab3": "Services",
+      "tab4": "Support",
+      "tab5": "Company"
     },
 
     "tabs": {
-      "p1Tab1": "",
-      "p2Tab1": "",
-      "p3Tab1": "",
-      "p4Tab1": "",
+      "p1Tab1": "Laboratory Technology",
+      "p2Tab1": "Measuring Instruments",
+      "p3Tab1": "Control Systems",
+      "p4Tab1": "Weighing Equipment",
 
-      "p1Tab2": "",
-      "p2Tab2": "",
-      "p3Tab2": "",
-      "p4Tab2": "",
-      "p5Tab2": "",
+      "p1Tab2": "Electrical measurement",
+      "p2Tab2": "Humidity measurement",
+      "p3Tab2": "Moisture meter",
+      "p4Tab2": "Gas warning",
+      "p5Tab2": "Industrial weighing",
 
-      "p1Tab3": "",
-      "p2Tab3": "",
+      "p1Tab3": "Calibration",
+      "p2Tab3": "Development and production",
 
-      "p1Tab4": "",
-      "p2Tab4": "",
+      "p1Tab4": "Customer account",
+      "p2Tab4": "Download",
 
-      "p1Tab5": "",
-      "p2Tab5": "",
-      "p3Tab5": "",
-      "p4Tab5": ""
+      "p1Tab5": "Contact us",
+      "p2Tab5": "About PCE",
+      "p3Tab5": "The history of PCE Instruments",
+      "p4Tab5": "Career"
     },
 
     "banner": {
-      "h1": ""
+      "h1": "Efficient measurement technology for professionals."
     }
   },
 
   "body": {
     "messtechnik":{
-      "h2": "",
-      "p1": "",
-      "p2": "",
-      "p3": "",
-      "spanBefore": "",
-      "link":"",
-      "spanAfter":""
+      "h2": "Measurement technology from the Sauerland.",
+      "p1": "PCE Instruments provides industrial measuring instruments that help dabel to better analyze and optimize processes. Our field of activity relates primarily to the development, manufacture and sale of industrial products. Manufacturing and distribution of industrial products that contribute to increasing efficiency in many industries, such as industrial plants or laboratories.",
+      "p2": "PCE Instruments' main focus is on measuring instruments. In our catalog you will find handheld devices, instruments for fixed installation and other measuring instruments for analysis and research.",
+      "p3": "It is becoming increasingly important to capture data, whether in industry or in the professional and private sectors. The demand is mainly for devices that measure quickly and accurately and provide concrete results during the measurement. At PCE Instruments you will find over 600 instruments for measuring, control and weighing technology.",
+      "spanBefore": "Please",
+      "link":"contact us ! ",
+      "spanAfter":"We will be happy to help you find the right measuring instrument."
     },
 
     "messtechnik2": {
-      "p1": "",
-      "h2": "",
-      "h3Card1": "",
-      "pCard": "",
-      "h3Card2": "",
-      "h3Card3": "",
-      "h3Card4": ""
+      "p1": "For more than 40 years",
+      "h2": "Always at the cutting edge of measurement technology.",
+      "h3Card1": "Measuring Instruments",
+      "pCard": "Discover →",
+      "h3Card2": "Control Systems",
+      "h3Card3": "Laboratory Technology",
+      "h3Card4": "Weighing Equipment"
     },
 
     "branche": {
-      "h2": "",
-      "p1": "",
-      "p2": "",
-      "p3": "",
-      "p4": "",
-      "h3Card1": "",
-      "pCard": "",
-      "h3Card2": "",
-      "h3Card3": "",
-      "h3Card4": "",
-      "h3Card5": "",
-      "h3Card6": ""
+      "h2": "The right solution for every industry.",
+      "p1": "PCE Instruments offers complete solutions for demanding, industrial and modern measurement tasks. Our solutions offer maximum measurement reliability. In the field of inspection and non-destructive testing, we provide you with measuring instruments that determine and analyze the quality of various scientific and industrial applications without damaging the material.",
+      "p2": "If values deviate from the previous values in a wide variety of manufacturing processes, this would increase manufacturing costs on the one hand and also result in a loss of time on the other. PCE Instruments offers preventive solutions that detect possible deviations directly in the manufacturing process, thereby reducing both costs and time.",
+      "p3": "The HMI (Human Machine Interface) operating devices provide great support for process visualization. They are specially designed for operating and monitoring processes in industry. Regardless of the type of communication you require (fieldbus, Ethernet, serial interfaces), our operating devices can be easily integrated into all networks.",
+      "p4": "Our solutions for your company. Industrial solutions.",
+      "h3Card1": "Process visualization",
+      "pCard": "Discover →",
+      "h3Card2": "Industrial weighing",
+      "h3Card3": "Wet measurement",
+      "h3Card4": "Other card",
+      "h3Card5": "Other card",
+      "h3Card6": "Other card"
     },
 
     "umweltdaten": {
-      "h2": "",
-      "p1": "",
-      "p2": "",
-      "p3": "",
-      "pLogo1": "",
-      "pLogo2": "",
-      "pLogo3": "",
-      "pLogo4": "",
-      "pLogo5": "",
-      "pLogo6": ""
+      "h2": "Measure and record environmental data.",
+      "p1": "The collection and evaluation of climate and other environmental data not only plays a major role in the production of food and the extraction of drinking water. In addition to factors that influence these two vital areas, there are many other parameters that can affect life, health and performance. The effects of our way of life and work on plants, animals and the global climate, which are already noticeable in many places without measurement, are also an important topic in the field of environmental measurement technology. In addition, devices that can be used to measure the achievable or achieved yield of renewable energies are an important tool for implementing the energy transition.",
+      "p2": "For many things that affect us and our environment, there are now defined limit values or recommendations that can be monitored with measuring devices. Whether physical parameters such as temperature, air pressure, sound pressure level, electromagnetic radiation or substances. Whether they are absorbed through breathing, drinking water or food ... the dose causes something to have a harmful effect. Paracelsus recognized this as early as the 16th century.",
+      "p3": "Our services",
+      "pLogo1": "Air quality",
+      "pLogo2": "Water quality",
+      "pLogo3": "Radiation",
+      "pLogo4": "Noise",
+      "pLogo5": "climate data",
+      "pLogo6": "Climate forest"
     },
 
     "dienst": {
-      "h2": "",
-      "p1": "",
-      "p2": "",
-      "h3Card1": "",
-      "pCard":"", 
-      "h3Card2": ""
+      "h2": "Service and services for industrial measurements",
+      "p1": "PCE Instruments develops customer-specific solutions with specialized engineers and technicians. Close cooperation with customers allows us to achieve customized solutions and guarantee that the measuring instruments not only meet but exceed expectations. Our services include maintenance, calibration and, if necessary calibration and, if necessary, the repair of our devices.",
+      "p2": "PCE Instruments offers complete solutions: Data acquisition and transmission as well as visualization and control of processes on machines and systems. It is no longer necessary for a person to be on site at the machine or system for all of this work. Our industrial remote maintenance makes it possible to access a remote system and view or change parameters remotely.",
+      "h3Card1": "Development & Production",
+      "pCard":"Discover →", 
+      "h3Card2": "Installation & maintenance"
     },
 
     "position": {
-      "h2": "",
-      "p1": "",
-      "p2": "",
-      "link": "",
-      "pLogo1": "",
-      "pLogo2": "",
-      "pLogo3": "",
-      "pLogo4": ""
+      "h2": "Positioning of our company in facts and figures.",
+      "p1": "PCE Instruments cooperates with universities and research institutes. PCE Instruments has specialized in high quality equipment in the field of condition-based maintenance, although our product range covers much more to meet customer requirements. The focus of the development of new PCE products is on the one hand ease of use and on the other hand a great benefit for the customer.",
+      "p2": "At PCE, data and figures are essential, as it is particularly important in technology to know the data and statistics of all the parameters you want to control. to control. Here are some figures about PCE Instruments that show how our company has developed and grown since the 90s. For more information please contact us",
+      "link": "here.",
+      "pLogo1": "Years of experience",
+      "pLogo2": "Locations",
+      "pLogo3": "Products",
+      "pLogo4": "Million turnover"
     },
 
     "empfohlene": {
-      "h2": "",
-      "p1": "",
-      "pCard1": "",
-      "linkVid": "",
-      "pCard2": "",
-      "pCard3": ""
+      "h2": "Recommended products",
+      "p1": "Development, manufacture and sale of measuring, control, weighing and laboratory technology in the industry.",
+      "pCard1": "Sound level meter PCE-322A",
+      "linkVid": "Watch video →",
+      "pCard2": "Industrial endoscope PCE-VE 1000",
+      "pCard3": "Flowmeter PCE-TDS 100"
     }
 
   },
 
   "footer": {
-    "p1":"",
-    "span": "",
-    "h4-1": "",
-    "link1-1": "",
-    "link2-1": "",
-    "link3-1": "",
-    "link4-1": "",
-    "h4-2": "",
-    "link1-2": "",
-    "link2-2": "",
-    "link3-2": "",
-    "link4-2": "",
-    "h4-3": "",
-    "link1-3": "",
-    "link2-3": "",
-    "link3-3": "",
-    "link4-3": "",
-    "link5-3": "",
-    "link6-3": "",
-    "h4-4": "",
-    "span1": "",
-    "span2": "",
-    "span3": "",
-    "span4": "",
-    "span5": "",
-    "span6": "",
-    "span7": "",
-    "p2": ""
+    "p1":"*All prices excl. tax plus VAT.",
+    "span": "Shipping costs",
+    "h4-1": "The company",
+    "link1-1": "About us",
+    "link2-1": "History",
+    "link3-1": "Career",
+    "link4-1": "Branches",
+    "h4-2": "Product categories",
+    "link1-2": "Measuring Instruments",
+    "link2-2": "Control Systems",
+    "link3-2": "Weighing Equipment",
+    "link4-2": "Laboratory Technology",
+    "h4-3": "Subject areas",
+    "link1-3": "Status monitoring",
+    "link2-3": "Process visualization",
+    "link3-3": "Industrial weighing",
+    "link4-3": "Moisture measurement",
+    "link5-3": "Non-destructive testing",
+    "link6-3": "Gas warning",
+    "h4-4": "Social Media",
+    "span1": "Imprint",
+    "span2": "Shipping",
+    "span3": "Payment methods",
+    "span4": "Data protection",
+    "span5": "GTC",
+    "span6": "Cancellation policy",
+    "span7": "Return shipment",
+    "p2": "All rights reserved."
   },
 
-  "noscript": ""
+  "noscript": "Please enable Javascript for the website to work properly."
 }
