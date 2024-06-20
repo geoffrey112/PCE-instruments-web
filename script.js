@@ -133,22 +133,24 @@ function redirectSearchBar(){
 // Against spam robots //
 (function decodeMail(){
   const links = document.querySelectorAll('.contentLink > a');
-  const contentLinks = document.getElementsByClassName('contentLink');
   const link = Array.from(links);
-  const contentLink = Array.from(contentLinks);
 
-  contentLink.forEach((elem, idx) => {
-    elem.addEventListener('mouseenter', () => {
-      const data = link[idx].getAttribute('data-encode');
+  link.forEach(elem => {
+    elem.addEventListener('mouseenter', (event) => {
+      event.preventDefault();
+
+      const data = elem.getAttribute('data-encode');
       let decrypte = window.atob(data);
       decrypte = decrypte.replace('arobas', '@');
       decrypte = decrypte.replace('point', '.');
-      link[idx].setAttribute('href', 'mailto:' + decrypte);
+      elem.setAttribute('href', 'mailto:' + decrypte);
+      event.target.href = `mailto:${decrypte}`;
     });
-    
+
     elem.addEventListener('mouseleave', () => {
-      link[idx].removeAttribute('href');
+      elem.removeAttribute('href');
     });
+
   });
 
 })();
