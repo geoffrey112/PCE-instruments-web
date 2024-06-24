@@ -19,6 +19,12 @@ function animIconBurgerLeave(){
 
 function openCloseMenuBurger(){
 
+  const background = document.getElementById('backgroundMenu');
+  const menuBurger = document.getElementById('menuBurger');
+  const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)');
+  const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
+  const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
+
   if(!isMenuOpened){
     background.style.transitionDuration = '0.4s';
     background.style.opacity = 1;
@@ -156,14 +162,14 @@ function redirectSearchBar(){
 })();
 
 
-function displaySelectedLang(event){
-  const boxIsChecked = event.target.previousElementSibling.classList.contains('checked');
+function displayCheckLang(event){
+  const boxIsNotChecked = event.type === 'click' ? !event.target.previousElementSibling.classList.contains('checked') : false;
   const boxChecks = document.getElementsByClassName('boxCheck');
   const boxCheck = Array.from(boxChecks);
   const mainLang = document.getElementById('mainLang');
-
+  
   // Check selected language
-  if(!boxIsChecked){
+  if(boxIsNotChecked){
     boxCheck.forEach(elem => {
       elem.classList.remove('checked');
     });
@@ -174,11 +180,30 @@ function displaySelectedLang(event){
     mainLang.textContent = event.target.textContent;
   }
 
+  
+  // Detect user's lang
+  if(sessionStorage.getItem('user') !== 'true'){
+    
+    selectLang.forEach(elemLang => {
+      if(userLang === elemLang.id){
+        boxCheck.forEach(box => {
+          box.classList.remove('checked');
+        });
+  
+        elemLang.previousElementSibling.classList.add('checked');
+        mainLang.textContent = elemLang.textContent;
+      }
+    });
+
+  }
+
+
 }
 
 
 async function translate(event){
-  const boxIsChecked = event.target.previousElementSibling.classList.contains('checked');
+  const boxIsNotChecked = event.type === 'click' ? !event.target.previousElementSibling.classList.contains('checked') : false;
+  const sessionNotStored = event.type === 'DOMContentLoaded' ? sessionStorage.getItem('user') !== 'true' : false;
   const lang = document.querySelector('[lang]');
   let response;
   let jsonFile;
@@ -195,17 +220,19 @@ async function translate(event){
   const elemFoo = document.querySelectorAll('[data-trans-foo]');
   const headMiddle = document.querySelector('.headMiddle');
 
-  if(!boxIsChecked){
+
+  // Click (if box not checked) or detect user's lang
+  if(boxIsNotChecked || sessionNotStored){
 
     if(event.target.id === 'de'){
       location.reload();
-    }else if(event.target.id === 'fr'){
+    }else if(event.target.id === 'fr' || userLang === 'fr' && sessionNotStored){
       response = await fetch("lang/fr.json");
       jsonFile = await response.json();
       lang.setAttribute('lang', 'fr');
 
       headMiddle.style.margin = '150px 10%';
-    }else if(event.target.id === 'en'){
+    }else if(event.target.id === 'en' || userLang === 'en' && sessionNotStored){
       response = await fetch("lang/en.json");
       jsonFile = await response.json();
       lang.setAttribute('lang', 'en');
@@ -213,7 +240,7 @@ async function translate(event){
       headMiddle.style.margin = '80px 10% 150px 10%';
     }
 
-    if(event.target.id === 'fr' || event.target.id === 'en'){
+    if(event.target.id === 'fr' || event.target.id === 'en' || sessionNotStored){
       elemHeader.forEach(elem => {
         elem.textContent = jsonFile.header.main[elem.getAttribute('data-trans-main')];
       });
@@ -257,18 +284,15 @@ async function translate(event){
       }); 
     
     }
+
+    sessionStorage.setItem('user', 'true');
+
   }
   
 }
 
 
 ///////////////\\\\\\\\\\\\\\\
-
-const background = document.getElementById('backgroundMenu');
-const menuBurger = document.getElementById('menuBurger');
-const topLineIconBurger = document.querySelector('#iconBurger > div:nth-child(1)');
-const middleLineIconBurger = document.querySelector('#iconBurger > div:nth-child(2)');
-const bottomLineIconBurger = document.querySelector('#iconBurger > div:nth-child(3)');
 
 const iconBurger = document.getElementById('iconBurger');
 let isMenuOpened = false;
@@ -277,6 +301,9 @@ const contentTabs = document.getElementsByClassName('contentTab');
 const contentTab = Array.from(contentTabs);
 const contentLang = document.getElementById('contentLang');
 const menuLang = document.getElementsByClassName('menuLang')[0];
+const getLocalLang = window.navigator.language;
+const userLang = getLocalLang.split('-')[0];
+const selectLang = document.querySelectorAll('#fr, #en');
 
 const buttonSearch = document.getElementById('buttonSearch');
 const searchBar = document.getElementsByName('search')[0];
@@ -362,6 +389,10 @@ elemDate.textContent = currentYear;
 // Internationalization
 document.querySelectorAll('.menuLang p').forEach(p => {
   p.addEventListener('click', translate);
-  p.addEventListener('click', displaySelectedLang);
+  p.addEventListener('click', displayCheckLang);
 });
 
+
+// Detect user's lang
+document.addEventListener('DOMContentLoaded', displayCheckLang);
+document.addEventListener('DOMContentLoaded', translate);
